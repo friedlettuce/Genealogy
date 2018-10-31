@@ -88,8 +88,11 @@ void archive::printList() const{
 		  << std::setw(20) << "------" << std::endl;
 	
 	// Prints out brothers info
-	for(int i = 0; i < brothers.size(); ++i)
+	for(int i = 0; i < brothers.size(); ++i){
 		brothers[i]->printInfo();
+		std::cout << "---------------------------------"
+		          << "---------------------------------" << std::endl;
+	}
 }
 
 /* PRIVATE HELPER FUNCTIONS */
@@ -134,11 +137,11 @@ std::vector<std::string> archive::getLils(std::string& LL){
 }
 
 std::string archive::format(std::string& x){
-	std::string tmp = "";
+	std::string tmp;
 
 	for(auto ch : x){
 		if((std::isalnum(ch) || std::iswspace(ch)) 
-		&& (ch != '\t' || ch != '\n')){
+		&& (ch != '\t' || ch != '\n' || ch != '"')){
 			tmp += ch;
 		}
 	}

@@ -57,7 +57,19 @@ void brother::printInfo() const{
 		else
 			std::cout << std::setw(66);
 
-		std::cout << littles[i]->name << std::endl;
+		std::string tmp;
+
+		if(littles[i]->name[0] == '"'){
+			tmp = littles[i]->name.substr(1);
+		}
+		else if(littles[i]->name[littles[i]->name.size()] == '"'){
+			tmp = littles[i]->name.substr(0,
+				littles[i]->name.size()-2);
+		}
+		else
+			tmp = littles[i]->name;
+
+		std::cout << tmp << std::endl;
 	} 
 }
 
