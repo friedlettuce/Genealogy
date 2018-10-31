@@ -28,18 +28,29 @@ archive::archive(std::ifstream& in){
 		std::vector<std::string> littles = getLils(tmp);
 		for(auto ll : littles)
 			ll = format(ll);
+		
 		int current;
-
 		brother* newB = new brother(year, name);
 
-		// Sets big		
-		if(isBro(bg))
-			newB->setBig(brothers[big]);
-		else if(bg.size() > 0){
-			brothers.push_back(new brother(bg));
-			current = brothers.size() - 1;
-			newB->setBig(brothers[current]);
+		// Adds a preliminary newB to brothers
+		if(isBro(name)){
+			brothers[big] = newB;
+			current = big;
 		}
+		else{
+			brothers.push_back(newB);
+			current = brothers.size() - 1;
+		}
+
+		// Sets big		
+		if(isBro(bg)){
+			newB->setBig(brothers[big]);
+			
+			if(!isLittle(newB->getName()))
+				brothers[big]->pushLittle(newB);	
+		}
+		else if(bg.size() > 0)
+			newB->setBig(new brother(bg));
 
 		// Adds littles to bro
 		for(auto little : littles){
@@ -48,24 +59,21 @@ archive::archive(std::ifstream& in){
 			// Checks if little is already a bro
 			if(isBro(little))
 				brothers[current]->pushLittle(brothers[big]);
-			else{
-				brother* x = new brother(little);
-				newB->pushLittle(x);
-				brothers.push_back(x);
-			}
+			else
+				newB->pushLittle(new brother(little));
 		}
+		
+		// Adds a more complete newB to brothers
 		if(isBro(name)){
-			// Checks for duplicates
-			if(newB > brothers[big])
-				brothers[big] = newB;
+			brothers[big] = newB;
+			current = big;
 		}
 		else{
 			brothers.push_back(newB);
 			current = brothers.size() - 1;
 		}
-		if(isLittle(name)){
+		if(isLittle(name))
 			brothers[big]->replaceLittle(brothers[current]);
-		}
 	}
 	in.close();
 }

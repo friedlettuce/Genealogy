@@ -12,7 +12,14 @@ brother::brother(const std::string& n):name{n},big{nullptr}{}
 brother::brother(const std::string& y, const std::string& n)
 :year{y},name{n},big{nullptr}{}
 
-void brother::setBig(brother* b){ big = b; }
+void brother::setBig(brother* b){
+	big = b;
+	
+	for(auto lil : b->littles){
+		if(name == lil->name)
+			lil = this;
+	}
+}
 
 void brother::replaceLittle(brother* l){
 	for(int i = 0; i < littles.size(); ++i){
