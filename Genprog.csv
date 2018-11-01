@@ -1,6 +1,28 @@
 Year,Name,Big,Little
 Sp 78,Rick Adams,,Bob Thurston
 Fa 80,Bob Thurston,Rick Adams,
+Fa 81,Tom Larson,,Louis St. Laurent
+Sp 83,Ron Lagg,,Roger Duncan
+Sp 83,Steve Reid,,Larry Blocker
+Sp 83,Ted Vives,,"Charles Frishman, Todd Martin"
+Fa 83,Rob Lang,,
+Sp 84,Rodney Dorsey,,Jim Byo
+Sp 84,George Reed,,
+Sp 84,Joe Williams,,Scott Sapp
+Fa 84,Owen Bradley,,Tom Kane
+Fa 84,Bill Lliff,,Bill Rosche
+Fa 84,Chris Lawrence,,"Larry York, Robb Van Eck"
+Fa 84,Shannon Rubush,,"Tim Schardt, Richard Newman"
+Sp 85,Bob Medlin,,"Raphael Gutierrez, William Kramer"
+Fa 85,Chuck Bedard,Dave Kemether,Martin Inman
+Fa 85,Larry Blocker,Steve Reid,
+Fa 85,Chris Brugger,Dave Mason,
+Fa 85,Roger Duncan,Ron Lagg,
+Fa 85,Charles Frishman,Ted Vives,
+Fa 85,Rick Greenwood,Steve Oser,
+Fa 85,Raphael Gutierrez,Bob Medlin,
+Fa 85,Louis St. Laurent,Tom Larson,Jay Klecker
+Fa 85,Tim Schardl,Shannon Rubush,
 Sp 18,Garett Anderson,Parker Garrity,
 Sp 17,Parker Garrity,Katie Kirchoff,Garett Anderson
 Sp 16,Katie Kirchoff,Bridget Harper,Parker Garrity
@@ -24,3 +46,4 @@ Sp 18,Sam Creamer,Turner Gray,
 Sp 18,Houston Luzader,Ben Maryland,
 Sp 17,Curtis Newsome,,"Isabel Hautmann, Dylan Barlow"
 Sp 17,Reannan Riedy,,"Caleb Miller, Andrew Ramos"
+Sp 13,Hayden Elias-Rodriguez,,Ashley Jeanty

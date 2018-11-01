@@ -15,17 +15,29 @@ class brother{
 		brother(const std::string& y, const std::string& n);
 	
 		void setBig(brother* b);
-		void replaceLittle(brother* l);
 		void pushLittle(brother* l);
+		
+		void replaceLittle(brother* l);
 
 		std::string getName() const;
 		std::string getYear() const;
 		std::string getBig() const;
+
+		void printLine(brother* current);
+		
 		std::string getLittle(const int& i = 0) const;
+		bool isLittle(const std::string& n, int& l) const;
 		int lilSize() const;
 
 		void printInfo() const;
+};
 
-		friend bool operator>(const brother& b1, const brother& b2);
+// Tree implementation of family
+
+class family{
+	private:
+		brother* root;
+	public:
+		family(brother* rt);	
 };
 #endif

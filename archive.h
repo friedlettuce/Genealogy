@@ -17,9 +17,14 @@ class archive{
 
 		std::vector<std::string> getLils(std::string& LL);
 		std::string format(std::string& x);
-	public:
-		archive(std::ifstream& in);
 		
+		void addBrother(std::string& year, std::string& name,
+			std::string& bg, std::string& tmp);
+	public:
+		~archive();
+
+		void readFile(std::ifstream& in);
+		void getLine(std::string& n);
 		void printList() const;
 };
 #endif

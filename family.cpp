@@ -4,21 +4,17 @@
 #include <vector>
 #include "family.h"
 
-// Brother
+/*		Brother			*/
+
 brother::brother():year{NULL},name{NULL},big{nullptr}{}
-
 brother::brother(const std::string& n):name{n},big{nullptr}{}
-
 brother::brother(const std::string& y, const std::string& n)
 :year{y},name{n},big{nullptr}{}
 
 void brother::setBig(brother* b){
+	if(big != nullptr)
+		delete big;
 	big = b;
-	
-	for(auto lil : b->littles){
-		if(name == lil->name)
-			lil = this;
-	}
 }
 
 void brother::replaceLittle(brother* l){
@@ -36,15 +32,38 @@ void brother::pushLittle(brother* l){ littles.push_back(l); }
 std::string brother::getYear() const{ return year; }
 std::string brother::getName() const{ return name; }
 std::string brother::getBig() const{ return big->name; }
+
+bool brother::isLittle(const std::string& n, int& l) const{
+	if(littles.size() == 0)
+		return false;
+
+	for(int i = 0; i < littles.size(); ++i){
+		if(littles[i]->name == n){
+			l = i;
+			return true;
+		}	
+	}
+	return false;
+}
+
+void brother::printLine(brother* current){
+	if(current->big != nullptr){
+		printLine(current->big);
+		std::cout << "\t|" << std::endl;
+	}
+	std::cout << current->name << std::endl;
+}
+
 std::string brother::getLittle(const int& i) const{ 
-	return littles[i]->getName(); 
+	if(i < littles.size())
+		return littles[i]->getName(); 
 }
 int brother::lilSize() const{ return littles.size(); }
 
 void brother::printInfo() const{
 	std::cout << std::left << std::setw(6) << year 
-		  << std::setw(20) << name 
-		  << std::setw(20) << (big == nullptr ? "" : big->name);
+		  << std::setw(25) << name 
+		  << std::setw(25) << (big == nullptr ? "" : big->name);
 	
 	if(littles.size() == 0)
 		std::cout << std::endl;
@@ -53,18 +72,18 @@ void brother::printInfo() const{
 		std::cout << std::right;		
 
 		if(i == 0)
-			std::cout << std::setw(20);
+			std::cout << std::setw(25);
 		else
-			std::cout << std::setw(66);
+			std::cout << std::setw(81);
 
 		std::string tmp;
 
 		if(littles[i]->name[0] == '"'){
 			tmp = littles[i]->name.substr(1);
 		}
-		else if(littles[i]->name[littles[i]->name.size()] == '"'){
+		else if(littles[i]->name[littles[i]->name.size()-1] == '"'){
 			tmp = littles[i]->name.substr(0,
-				littles[i]->name.size()-2);
+				littles[i]->name.size()-1);
 		}
 		else
 			tmp = littles[i]->name;
@@ -73,35 +92,6 @@ void brother::printInfo() const{
 	} 
 }
 
-bool operator>(const brother& b1, const brother& b2){
-	int b1Objs = 0, b2Objs = 0;	// Counts how many things objects have
+/*		FAMILY			*/
 
-	if(b1.year.size() > b2.year.size())
-		++b1Objs;
-	else if(b2.year.size() > b1.year.size())
-		++b2Objs;
-	
-	if(b1.name.size() > b2.name.size())
-		++b1Objs;
-	else if(b2.name.size() > b1.name.size())
-		++b2Objs;
-
-	if(b1.big == nullptr){
-		if(b2.big != nullptr)
-			++b2Objs;
-	} else if(b2.big == nullptr){
-		if(b1.big != nullptr)
-			++b1Objs;
-	}
-	else if(b1.big->name.size() > b2.big->name.size())
-		++b2Objs;
-	else if(b2.big->name.size() > b1.big->name.size())
-		++b1Objs;
-
-	if(b1.littles.size() > b2.littles.size())
-		++b1Objs;
-	else if(b2.littles.size() > b1.littles.size())
-		++b2Objs;
-	
-	return b1 > b2;
-}
+family::family(brother* rt){ root = rt; }
