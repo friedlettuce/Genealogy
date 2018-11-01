@@ -80,11 +80,17 @@ void brother::printInfo() const{
 
 		if(littles[i]->name[0] == '"'){
 			tmp = littles[i]->name.substr(1);
+		
+			if(littles[i]->name[name.size()-1] == '"')
+				tmp = tmp.substr(0,name.size()-1);
 		}
-		else if(littles[i]->name[littles[i]->name.size()-1] == '"'){
+		else if(littles[i]->name[name.size()-1] == '"')
+			tmp = littles[i]->name.substr(0,name.size()-1);
+		/*
+		if(littles[i]->name[littles[i]->name.size()-1] == '"'){
 			tmp = littles[i]->name.substr(0,
 				littles[i]->name.size()-1);
-		}
+		}*/
 		else
 			tmp = littles[i]->name;
 

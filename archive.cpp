@@ -97,8 +97,8 @@ std::string archive::format(std::string& x){
 	std::string tmp;
 
 	for(auto ch : x){
-		if((std::isalnum(ch) || std::iswspace(ch) || ch == '-') 
-		&& (ch != '\t' || ch != '\n' || ch != '"')){
+		if((std::isalnum(ch) || std::iswspace(ch) || ch == '-' 
+		|| ch == '.') && (ch != '\t' || ch != '\n' || ch != '"')){
 			tmp += ch;
 		}
 	}
