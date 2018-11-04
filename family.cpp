@@ -69,7 +69,9 @@ bool brother::isLittle(const std::string& n, int& l) const{
 void brother::printLine(brother* current){
 	if(current->big != nullptr){
 		printLine(current->big);
-		std::cout << "\t|" << std::endl;
+	
+		std::cout << "  ^" << std::endl
+			  << "  |" << std::endl;
 	}
 	std::cout << current->name << std::endl;
 }
