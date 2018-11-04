@@ -76,6 +76,29 @@ void brother::printLine(brother* current){
 	std::cout << current->name << std::endl;
 }
 
+void brother::printTree(brother* current, const int& id){
+	bool fLil = false;
+
+	std::cout << indent(id-3) << current->name << std::endl;
+
+	for(auto lil : current->littles){
+		if(!fLil){
+			std::cout << indent(id) << "   ^\n"
+				  << indent(id) << "   |\n"
+				  << indent(id) << "   ---\n"
+				  << indent(id) << "     |"
+				  << std::endl;
+			fLil = true;
+
+			printTree(lil, id+6);
+		} else{
+			std::cout << indent(id)
+				  << "     |" << std::endl;
+			printTree(lil, id+6);
+		}
+	}
+}
+
 std::string brother::getLittle(const int& i) const{ 
 	if(i < littles.size())
 		return littles[i]->getName(); 
@@ -130,6 +153,14 @@ const brother& cmp2){
 
 bool operator!=(const brother& cmp1,
 const brother& cmp2){ return !(cmp1 == cmp2); } 
+
+std::string brother::indent(const int& id) const{
+	std::string tmp;
+
+	for(int i = 0; i < id; ++i)
+		tmp += ' ';
+	return tmp;
+}
 
 /*		FAMILY			*/
 

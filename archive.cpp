@@ -30,7 +30,7 @@ void archive::readFile(std::ifstream& in){
 	in.close();
 }
 
-void archive::printBrother(std::string& n){
+void archive::printBrother(const std::string& n){
 	if(!isBro(n)){
 		return;
 	}
@@ -39,12 +39,20 @@ void archive::printBrother(std::string& n){
 	brothers[big]->printInfo();
 }
 
-void archive::printLine(std::string& n){
+void archive::printLine(const std::string& n){
 	if(!isBro(n)){
 		return;
 	}
 
 	brothers[big]->printLine(brothers[big]);
+}
+
+void archive::printFamily(const std::string& n){
+	if(!isBro(n)){
+		return;
+	}
+
+	brothers[big]->printTree(brothers[big], 0);
 }
 
 void archive::printBanner() const{

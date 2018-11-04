@@ -6,8 +6,7 @@
 using namespace std;
 
 void menu();
-void getLine(archive& Psi);
-void getBrother(archive& Psi);
+string getBrother();
 
 int main(int args, char* argsv[]){	
 	// Checks and reads file
@@ -30,14 +29,17 @@ int main(int args, char* argsv[]){
 		cin >> select;
 
 		switch(tolower(select)){
+			case 'f':
+				Psi.printFamily(getBrother());
+				break;
 			case 'l': 	
 				Psi.printList();
 				break;
 			case 'o':
-				getLine(Psi);
+				Psi.printLine(getBrother());
 				break;
 			case 'p':
-				getBrother(Psi);
+				Psi.printBrother(getBrother());
 				break;	
 			case 'q':
 				break;
@@ -45,38 +47,26 @@ int main(int args, char* argsv[]){
 				cout << "Not a valid entry" << endl;
 				break;
 		}
+		cout << endl;
 	} while(tolower(select) != 'q');
 
 	cout << endl << "Goodbye." << endl;
 	return 0;
 }
 
-void getLine(archive& Psi){
+string getBrother(){
 	cin.ignore();
-
-	string brother;	// Gets the brother to search
-	cout << "Enter a brother: ";
-	getline(cin, brother);
-
-	cout << endl;
-	Psi.printLine(brother);
-	cout << endl;
-}
-
-void getBrother(archive& Psi){
-	cin.ignore();
-
 	string brother;
+	
 	cout << "Enter a brother: ";
 	getline(cin, brother);
-
 	cout << endl;
-	Psi.printBrother(brother);
-	cout << endl;
+	return brother;
 }
 
 void menu(){
 	cout << "---------------------" << endl
+	     << "F\tPrint tree" << endl
 	     << "L\tList Brothers" << endl
 	     << "O\tPrint line of brother" << endl
 	     << "P\tPrint brother" << endl

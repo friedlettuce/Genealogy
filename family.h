@@ -9,6 +9,8 @@ class brother{
 		std::string name, year;
 		brother* big;
 		std::vector<brother*> littles;
+
+		std::string indent(const int& id) const;
 	public:
 		brother();
 		brother(const std::string& n);
@@ -22,13 +24,14 @@ class brother{
 		std::string getYear() const;
 		std::string getBig() const;
 
-		void printLine(brother* current);
 		
 		std::string getLittle(const int& i = 0) const;
 		bool isLittle(const std::string& n, int& l) const;
 		int lilSize() const;
 
 		void printInfo() const;
+		void printLine(brother* current);
+		void printTree(brother* current, const int& indent);
 
 		friend bool operator==(const brother& cmp1, 
 			const brother& cmp2);

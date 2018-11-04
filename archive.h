@@ -24,8 +24,9 @@ class archive{
 		~archive();
 		void readFile(std::ifstream& in);
 
-		void printBrother(std::string& n);
-		void printLine(std::string& n);
+		void printBrother(const std::string& n);
+		void printLine(const std::string& n);
+		void printFamily(const std::string& n);
 	
 		void printBanner() const;
 		void printList() const;
