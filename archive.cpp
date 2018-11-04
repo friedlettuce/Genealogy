@@ -70,9 +70,9 @@ void archive::printList() const{
 	// Prints out brothers info
 	for(int i = 0; i < brothers.size(); ++i){
 		brothers[i]->printInfo();
-		std::cout << "----------------------------------------"
-		          << "-----------------------------------------" 
-			  << std::endl;
+		//std::cout << "----------------------------------------"
+		 //         << "-----------------------------------------" 
+		  //	  << std::endl;
 	}
 }
 

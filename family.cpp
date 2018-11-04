@@ -92,6 +92,10 @@ void brother::printTree(brother* current, const int& id){
 
 			printTree(lil, id+6);
 		} else{
+			std::cout << std::endl << indent(id-3);
+			std::cout << current->name << std::endl;
+			std::cout << indent(id);
+			std::cout << "     ^" << std::endl;
 			std::cout << indent(id)
 				  << "     |" << std::endl;
 			printTree(lil, id+6);
