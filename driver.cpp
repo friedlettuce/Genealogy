@@ -7,6 +7,7 @@ using namespace std;
 
 void menu();
 void getLine(archive& Psi);
+void getBrother(archive& Psi);
 
 int main(int args, char* argsv[]){	
 	// Checks and reads file
@@ -35,6 +36,9 @@ int main(int args, char* argsv[]){
 			case 'o':
 				getLine(Psi);
 				break;
+			case 'p':
+				getBrother(Psi);
+				break;	
 			case 'q':
 				break;
 			default:	
@@ -55,7 +59,19 @@ void getLine(archive& Psi){
 	getline(cin, brother);
 
 	cout << endl;
-	Psi.getLine(brother);
+	Psi.printLine(brother);
+	cout << endl;
+}
+
+void getBrother(archive& Psi){
+	cin.ignore();
+
+	string brother;
+	cout << "Enter a brother: ";
+	getline(cin, brother);
+
+	cout << endl;
+	Psi.printBrother(brother);
 	cout << endl;
 }
 
@@ -63,6 +79,7 @@ void menu(){
 	cout << "---------------------" << endl
 	     << "L\tList Brothers" << endl
 	     << "O\tPrint line of brother" << endl
+	     << "P\tPrint brother" << endl
 	     << "Q\tQuit" << endl << endl
 	     << "> ";
 }

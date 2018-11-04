@@ -12,22 +12,42 @@ brother::brother(const std::string& y, const std::string& n)
 :year{y},name{n},big{nullptr}{}
 
 void brother::setBig(brother* b){
+	if(big != nullptr && b != nullptr){
+		if(big == b)	
+			return;
+	}
 	if(big != nullptr)
 		delete big;
+	
 	big = b;
 }
 
-void brother::replaceLittle(brother* l){
+bool brother::replaceLittle(brother* l){
 	for(int i = 0; i < littles.size(); ++i){
+		if(!littles[i]->name.size())
+			continue;
 		if(l->name == littles[i]->name){
+			if(*l == *littles[i])
+				return true;
 			delete littles[i];
+		
+			l->setBig(this);
 			littles[i] = l;
-			break;
+			return true;
 		}
 	}
+	return false;
 }
 
-void brother::pushLittle(brother* l){ littles.push_back(l); }
+void brother::pushLittle(brother* l){
+	if(replaceLittle(l))
+		return;
+ 
+	if(l->big == nullptr || *l->big != *this){
+		l->big = this;
+	}
+	littles.push_back(l); 
+}
 
 std::string brother::getYear() const{ return year; }
 std::string brother::getName() const{ return name; }
@@ -76,27 +96,38 @@ void brother::printInfo() const{
 		else
 			std::cout << std::setw(81);
 
-		std::string tmp;
-
-		if(littles[i]->name[0] == '"'){
-			tmp = littles[i]->name.substr(1);
-		
-			if(littles[i]->name[name.size()-1] == '"')
-				tmp = tmp.substr(0,name.size()-1);
-		}
-		else if(littles[i]->name[name.size()-1] == '"')
-			tmp = littles[i]->name.substr(0,name.size()-1);
-		/*
-		if(littles[i]->name[littles[i]->name.size()-1] == '"'){
-			tmp = littles[i]->name.substr(0,
-				littles[i]->name.size()-1);
-		}*/
-		else
-			tmp = littles[i]->name;
-
-		std::cout << tmp << std::endl;
+		std::cout << littles[i]->name << std::endl;
 	} 
 }
+
+bool operator==(const brother& cmp1,
+const brother& cmp2){
+	if(cmp1.year != cmp2.year)
+		return false;
+	if(cmp1.name != cmp2.name)
+		return false;
+	
+	// Compares bigs
+	if(cmp1.big != nullptr){
+		if(cmp2.big != nullptr){
+			if(*cmp1.big != *cmp2.big)
+				return false;
+		} else
+			return false;
+	} else if(cmp2.big != nullptr)
+		return false;
+
+	if(cmp1.littles.size() != cmp2.littles.size())
+		return false;
+	for(int i = 0; i < cmp1.littles.size(); ++i){
+		if(*cmp1.littles[i] != *cmp2.littles[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator!=(const brother& cmp1,
+const brother& cmp2){ return !(cmp1 == cmp2); } 
 
 /*		FAMILY			*/
 

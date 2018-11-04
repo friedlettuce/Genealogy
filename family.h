@@ -16,9 +16,8 @@ class brother{
 	
 		void setBig(brother* b);
 		void pushLittle(brother* l);
-		
-		void replaceLittle(brother* l);
-
+		bool replaceLittle(brother* l);
+	
 		std::string getName() const;
 		std::string getYear() const;
 		std::string getBig() const;
@@ -30,6 +29,11 @@ class brother{
 		int lilSize() const;
 
 		void printInfo() const;
+
+		friend bool operator==(const brother& cmp1, 
+			const brother& cmp2);
+		friend bool operator!=(const brother& cmp1, 
+			const brother& cmp2);
 };
 
 // Tree implementation of family

@@ -22,9 +22,12 @@ class archive{
 			std::string& bg, std::string& tmp);
 	public:
 		~archive();
-
 		void readFile(std::ifstream& in);
-		void getLine(std::string& n);
+
+		void printBrother(std::string& n);
+		void printLine(std::string& n);
+	
+		void printBanner() const;
 		void printList() const;
 };
 #endif
