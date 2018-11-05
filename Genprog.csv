@@ -1,18 +1,36 @@
 Year,Name,Big,Little
+59,Sisco Deen,,
+64,William Agrella,Ben Godfrey,
+64,Kenneth Brodhead,Michael Curry,Thomas Crow
+Sp 64,Jan Kyle,Ben Godfrey,"Barry Milstead, John Warder, Demi Wilkinson"
+65,J Pate,Jay Sherman,
+Fa 66,Curtis Falany,Al Sergal,Ron Gregory
+67,William Hinicle,Tom Bennett,Dale Blackwell
+70,Marvin Goldstein,Tom Bose,
+Sp 70,Bert King,Pete MacLean,Sid Davis
+71,John Leschak,Steward Hughes,
+Fa 71,Gary Bulecza,Dave Delanoy,Nathan Jorgensen
+Fa 71,Earl Gill,Don Johnson,Bill Gore
+Fa 73,Jeff Hazel,Eric Johnson,"JB TT, Scott Smith"
+Sp 75,James Bullard,Kevin McElfresh,Monty Wise
 Fa 75,Ubaldo Montesino,,John Michaelides
 Sp 76,John Michaelides,Ubaldo Montesino,Russell Sapp
 Fa 76,Russell Sapp,John Michaelides,"Lee Monroe, Jeffrey Branson"
 Sp 78,Rick Adams,,Bob Thurston
 Fa 78,Lee Monroe,Russell Sapp,Norman Moss
+79,Joseph Bowens,,
 Sp 79,Jeffrey Branson,Russell Sapp,
+Sp 79,Al Gordon,Tom Collins,Skeet Bagley
+Sp 80,Kelvin Rolinson,,
 Fa 80,Bob Thurston,Rick Adams,
+Sp 81,Mike Campbell,Joseph Bowens,Kevin
 Fa 81,Thomas Larson,,Louis St. Laurent
 Sp 82,Jim Taylor,Jon Korman,"Joe Williams, Sandy Forseth"
 Sp 82,Norman Moss,Lee Monroe,Rodney Dorsey
 Sp 83,Ron Lagg,,Roger Duncan
 Sp 83,Steve Reid,,Larry Blocker
-Sp 83,Ted Vives,,"Charles Frishman, Todd Martin"
-Fa 83,Rob Lang,,
+Sp 83,Ted Vives,Kevin Madden,"Charles Frishman, Todd Martin, Mike McCall, Rob Lang"
+Fa 83,Rob Lang,Ted Vives,
 Sp 84,Rodney Dorsey,Norman Moss,"Jim Byo, Rufus Chester"
 Sp 84,George Reed,,
 Sp 84,Joe Williams,,Scott Sapp
@@ -49,11 +67,11 @@ Fa 86,Mark Dahlberg,,
 Fa 86,Shaun Kern,,Jeff Ketts
 Fa 86,Jeff Koontz,,Ken Turner
 Fa 86,Chris Martin,,
-Fa 86,Randy McCartney,Rufus Chester,"Joseph Price, Tim Mentzer, Tim Newcomb"
+Fa 86,Randy McCartney,Rufus Chester,"Tony Price, Tim Mentzer, Tim Newcomb"
 Sp 87,Brian Blatz,,
 Sp 87,John Busch,Dan Schoenborn,
 Sp 87,Ken Gluckman,Chris Lawrence,Mark Shaw
-Sp 87,Jay Hayes,,Steve Kittendorf
+Sp 87,Jay Hayes,Brian Grady,Steve Kittendorf
 Sp 87,Chris Martindale,,
 Sp 87,Bruce Norton,,
 Sp 87,Paul/Otis Ryan,Douglas Rugala,"Tyrone Adkins, Terrell Freeman"
@@ -69,7 +87,7 @@ Sp 88,Tyrone Adkins,Paul/Otis Ryan,"Dean Dukes, Michael Jenkins"
 Sp 88,Kevin Collier,Mike Staden,
 Sp 88,Eric Kamm,Brian Grady,"Dave Furrie, Darren Smith"
 Sp 88,Jeff Ketts,Shaun Kern,"Terry Baker, Todd Wager"
-Sp 88,Joseph Price,Randy McCartney,
+Sp 88,Tony Price,Randy McCartney,
 Sp 88,Mark Shaw,Ken Gluckman,Jimmie Rice
 Sp 88,Ken Turner,Jeff Koontz,"Jay Link, Patrick Campbell"
 Sp 88,Robb Van Eck,Chris Lawrence,"Erik Nielson, Jason Esteve"
@@ -99,10 +117,10 @@ Fa 89,Randy Manzi,Jason Laing,Frank Silvia
 Fa 89,Andy McCall,John Farrage,
 Fa 89,Tim Mentzer,Randy McCartney,Mark Addington
 Fa 89,Erik Nielson,Robb Van Eck,
-Fa 89,Jim Ryerson,Alex Marquez,"Dave Booher, Mike Hazelief"
+Fa 89,Jim Ryerson,Alex Marquez,"David Booher, Mike Hazelief"
 Fa 89,Darren Smith,Eric Kamm,"Dave Sheridan, Trey Thaxton"
 Fa 89,Mike Vandiver,Tom Hamer,
-Sp 90,Dave Booher,Jim Ryerson,
+Sp 90,David Booher,Jim Ryerson,
 Sp 90,Mike Eggen,Rick Beder,
 Sp 90,Chris Gadsden,Steve Kittendorf,
 Sp 90,Patrick Green,Steve Spaulding,
@@ -191,7 +209,7 @@ Fa 95,Mike Stanley,Louis St. Petery,
 Sp 96,Louis Alter,Dan Calia,Mike Francis
 Sp 96,Eddie Garvar,David Hedgecoth,Seth Weiner
 Sp 96,Kevin McDonald,Dan Eger,Vince DiCiccio
-Sp 96,Clay Smithers,Keith Sanz,"Matt Schmehl, Brendan Watters"
+Sp 96,Clay Smithers,Keith Sanz,"Matt Schmehl, Brendan Watters, Matt Lohmes"
 Sp 96,LaQuint Thomas,Roy McQuaid,Frank Jimenez
 Sp 96,John Vreeland,Jason Adams,Chris Vawter
 Fa 96,Ed Anderson,Ivan Alexander,
@@ -221,9 +239,10 @@ Sp 98,Marc Galloway,David Hedgecoth,
 Sp 98,Mike Greenman,Joe Barber,
 Sp 98,Sam Jabado,Chris Vawter,
 Sp 98,Joe Lucia,Andy Stoner,
-Sp 98,Chad Temple,Dean Geske,
+Sp 98,Chad Temple,Dean Geske,Whitney Smith
 Sp 98,Brendan Watters,Clay Smithers,
 Sp 98,Mike Wilkes,Brad Ruth,
+Sp 99,Whitney Smith,Chad Temple,A.J Makielski
 Sp 99,Thomas Lathrop,Brett Davidson,
 Sp 03,Jesse Slade,,
 Sp 04,Mark Shilling,,

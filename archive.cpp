@@ -32,6 +32,7 @@ void archive::readFile(std::ifstream& in){
 
 void archive::printBrother(const std::string& n){
 	if(!isBro(n)){
+		std::cout << "Brother not found" << std::endl;
 		return;
 	}
 
@@ -41,6 +42,7 @@ void archive::printBrother(const std::string& n){
 
 void archive::printLine(const std::string& n){
 	if(!isBro(n)){
+		std::cout << "Brother not found" << std::endl;
 		return;
 	}
 
@@ -49,6 +51,7 @@ void archive::printLine(const std::string& n){
 
 void archive::printFamily(const std::string& n){
 	if(!isBro(n)){
+		std::cout << "Brother not found" << std::endl;
 		return;
 	}
 
