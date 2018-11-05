@@ -7,6 +7,7 @@ using namespace std;
 
 void menu();
 string getBrother();
+string getClass();
 
 int main(int args, char* argsv[]){	
 	// Checks and reads file
@@ -40,6 +41,9 @@ int main(int args, char* argsv[]){
 				break;
 			case 'p':
 				Psi.printBrother(getBrother());
+				break;
+			case 'c':
+				Psi.printClass(getClass());
 				break;	
 			case 'q':
 				break;
@@ -64,12 +68,23 @@ string getBrother(){
 	return brother;
 }
 
+string getClass(){
+	cin.ignore();
+	string c;
+
+	cout << "Enter class: ";
+	getline(cin, c);
+	cout << endl;
+	return c;
+}
+
 void menu(){
 	cout << "---------------------" << endl
 	     << "F\tPrint tree" << endl
 	     << "L\tList Brothers" << endl
 	     << "O\tPrint line of brother" << endl
 	     << "P\tPrint brother" << endl
+	     << "C\tPrint class" << endl
 	     << "Q\tQuit" << endl << endl
 	     << "> ";
 }

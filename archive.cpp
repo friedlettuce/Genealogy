@@ -69,14 +69,36 @@ void archive::printBanner() const{
 }
 	
 void archive::printList() const{
-	printBanner();	
+	bool empty = true;
+
 	// Prints out brothers info
 	for(int i = 0; i < brothers.size(); ++i){
+		if(i == 0){
+			printBanner();
+			empty = false;
+		}
+
 		brothers[i]->printInfo();
-		//std::cout << "----------------------------------------"
-		 //         << "-----------------------------------------" 
-		  //	  << std::endl;
 	}
+	if(empty)
+		std::cout << "No brothers found" << std::endl;
+}
+
+void archive::printClass(const std::string& c) const{
+	bool empty = true;
+
+	for(int i = 0; i < brothers.size(); ++i){
+		if(i == 0){
+			printBanner();
+			empty = false;
+		}
+
+		if(c == brothers[i]->getYear())
+			brothers[i]->printInfo();
+	}
+	
+	if(empty)
+		std::cout << "No brothers found" << std::endl;
 }
 
 /* PRIVATE HELPER FUNCTIONS */
