@@ -21,7 +21,7 @@ Fa 78,Lee Monroe,Russell Sapp,Norman Moss
 79,Joseph Bowens,,
 Sp 79,Jeffrey Branson,Russell Sapp,
 Sp 79,Al Gordon,Tom Collins,Skeet Bagley
-Sp 80,Kelvin Rolinson,,
+Sp 80,Kevin Rolinson,,
 Fa 80,Bob Thurston,Rick Adams,
 Sp 81,Mike Campbell,Joseph Bowens,Kevin
 Fa 81,Thomas Larson,,Louis St. Laurent
@@ -29,8 +29,8 @@ Sp 82,Jim Taylor,Jon Korman,"Joe Williams, Sandy Forseth"
 Sp 82,Norman Moss,Lee Monroe,Rodney Dorsey
 Sp 83,Ron Lagg,,Roger Duncan
 Sp 83,Steve Reid,,Larry Blocker
-Sp 83,Ted Vives,Kevin Madden,"Charles Frishman, Todd Martin, Mike McCall, Rob Lang"
-Fa 83,Rob Lang,Ted Vives,
+Sp 83,Ted Vives,,"Charles Frishman, Todd Martin"
+Fa 83,Rob Lang,,
 Sp 84,Rodney Dorsey,Norman Moss,"Jim Byo, Rufus Chester"
 Sp 84,George Reed,,
 Sp 84,Joe Williams,,Scott Sapp
@@ -71,7 +71,7 @@ Fa 86,Randy McCartney,Rufus Chester,"Tony Price, Tim Mentzer, Tim Newcomb"
 Sp 87,Brian Blatz,,
 Sp 87,John Busch,Dan Schoenborn,
 Sp 87,Ken Gluckman,Chris Lawrence,Mark Shaw
-Sp 87,Jay Hayes,Brian Grady,Steve Kittendorf
+Sp 87,Jay Hayes,,Steve Kittendorf
 Sp 87,Chris Martindale,,
 Sp 87,Bruce Norton,,
 Sp 87,Paul/Otis Ryan,Douglas Rugala,"Tyrone Adkins, Terrell Freeman"
@@ -117,10 +117,10 @@ Fa 89,Randy Manzi,Jason Laing,Frank Silvia
 Fa 89,Andy McCall,John Farrage,
 Fa 89,Tim Mentzer,Randy McCartney,Mark Addington
 Fa 89,Erik Nielson,Robb Van Eck,
-Fa 89,Jim Ryerson,Alex Marquez,"David Booher, Mike Hazelief"
+Fa 89,Jim Ryerson,Alex Marquez,"Dave Booher, Mike Hazelief"
 Fa 89,Darren Smith,Eric Kamm,"Dave Sheridan, Trey Thaxton"
 Fa 89,Mike Vandiver,Tom Hamer,
-Sp 90,David Booher,Jim Ryerson,
+Sp 90,Dave Booher,Jim Ryerson,
 Sp 90,Mike Eggen,Rick Beder,
 Sp 90,Chris Gadsden,Steve Kittendorf,
 Sp 90,Patrick Green,Steve Spaulding,
@@ -209,7 +209,7 @@ Fa 95,Mike Stanley,Louis St. Petery,
 Sp 96,Louis Alter,Dan Calia,Mike Francis
 Sp 96,Eddie Garvar,David Hedgecoth,Seth Weiner
 Sp 96,Kevin McDonald,Dan Eger,Vince DiCiccio
-Sp 96,Clay Smithers,Keith Sanz,"Matt Schmehl, Brendan Watters, Matt Lohmes"
+Sp 96,Clay Smithers,Keith Sanz,"Matt Schmehl, Brendan Watters"
 Sp 96,LaQuint Thomas,Roy McQuaid,Frank Jimenez
 Sp 96,John Vreeland,Jason Adams,Chris Vawter
 Fa 96,Ed Anderson,Ivan Alexander,
@@ -239,10 +239,10 @@ Sp 98,Marc Galloway,David Hedgecoth,
 Sp 98,Mike Greenman,Joe Barber,
 Sp 98,Sam Jabado,Chris Vawter,
 Sp 98,Joe Lucia,Andy Stoner,
-Sp 98,Chad Temple,Dean Geske,Whitney Smith
+Sp 98,Chad Temple,Dean Geske,
 Sp 98,Brendan Watters,Clay Smithers,
 Sp 98,Mike Wilkes,Brad Ruth,
-Sp 99,Whitney Smith,Chad Temple,A.J Makielski
+Sp 99,Whitney Smith,Chad Temple,AJ Makielski
 Sp 99,Thomas Lathrop,Brett Davidson,
 Sp 03,Jesse Slade,,
 Sp 04,Mark Shilling,,
@@ -295,8 +295,25 @@ Sp 10,James Smith,,
 Sp 10,Stan Sochacki,,
 Sp 10,Zachary Van Dijk,Andrew Vzral,Steven Zakai
 Fa 13,Kim,,
-Sp 13,Matthew Tenore,,
+Sp 13,Matthew Tenore,,Chancer Teel
+Sp 16,Kyle Compare,Alex Machecek,"Alexa Lowry, Mia Carter"
+Sp 16,Sheldon Martin,Cameron Clark,Matthew Bolinder
+Sp 16,Elizabeth Frickey,Grace Garratt,Curtis Newsome
+Sp 16 ,Justin Snively,Alex Gonzalez,Brenden Richman
+Sp 16,Jon Lee,Darren Rivera,Belton Morgan
+Fa 16,Katie Coffey,Tiffany Carpenter,Alex Puckett
+Fa 16,Adam Thompson,Jorge Bauzo,Hailey Cruz
+Fa 16,Alex Arbiter,Brian Labrec,Wil Vega
 Sp 17 ,Parker Garrity,Katie Kirchoff,Garett Anderson
+Sp 17,Steven Foster,Chancer Teel,Kris Rice
+Sp 17,Morgan Leamer,Elyse Frezza,Mason Ashford
+Sp 17,Kristina Loy,Rose Luzader,Emely Gazarov
+Sp 17,Curtis Newsome,Elizabeth Frickey,"Isabel Hautmann, Dylan Barlow"
+Sp 17,Reannan Riedy,Grace Garratt,"Caleb Miller, Andrew Ramos"
+Sp 17,Adam Siegel,Jorge Bauzo,Elise McKenzie
+Fa 17,Alexa Lowry,Kyle Compare,Autumn Smith
+Fa 17,Wil Vega,Alex Arbiter,
+Fa 17,Kaman Bipat,,
 Sp 18,Garett Anderson,Parker Garrity,
 Sp 16,Katie Kirchoff,Bridget Harper,Parker Garrity
 Sp 18,Brianne Harper,Elayna Youngson,
@@ -317,11 +334,7 @@ Sp 18,Elise McKenzie,Adam Siegel,
 Sp 18,Mia Carter,Kyle Compare,
 Sp 18,Sam Creamer,Turner Gray,
 Sp 18,Houston Luzader,Ben Maryland,
-Sp 17,Curtis Newsome,,"Isabel Hautmann, Dylan Barlow"
-Sp 17,Reannan Riedy,,"Caleb Miller, Andrew Ramos"
 Sp 13,Hayden Elias-Rodriguez,,Ashley Jeanty
-Sp 16,Kyle Compare,Alex Machecek,"Alexa Lowry, Mia Carter"
-Fa 17,Alexa Lowry,Kyle Compare,Autumn Smith
 Sp 15,Katie Larkin,Maggie Tobin,Regan Williams
 Sp 15,Malinda Williams,Lilio Camere,
 Sp 15,Michael Kerr,Darren Rivera,
