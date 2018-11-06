@@ -30,14 +30,13 @@ void archive::readFile(std::ifstream& in){
 	in.close();
 }
 
-void archive::printBrother(const std::string& n){
-	if(!isBro(n)){
-		std::cout << "Brother not found" << std::endl;
-		return;
+void archive::searchBrother(const std::string& n){
+	for(int i = 0; i < brothers.size(); ++i){
+		if(i == 0)
+			printBanner();
+		if(brothers[i]->getName().find(n) != std::string::npos)
+			brothers[i]->printInfo();
 	}
-
-	printBanner();
-	brothers[big]->printInfo();
 }
 
 void archive::printLine(const std::string& n){

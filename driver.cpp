@@ -30,7 +30,10 @@ int main(int args, char* argsv[]){
 		cin >> select;
 
 		switch(tolower(select)){
-			case 'f':
+			case 's':
+				Psi.searchBrother(getBrother());
+				break;
+			case 't':
 				Psi.printFamily(getBrother());
 				break;
 			case 'l': 	
@@ -38,9 +41,6 @@ int main(int args, char* argsv[]){
 				break;
 			case 'o':
 				Psi.printLine(getBrother());
-				break;
-			case 'p':
-				Psi.printBrother(getBrother());
 				break;
 			case 'c':
 				Psi.printClass(getClass());
@@ -80,11 +80,11 @@ string getClass(){
 
 void menu(){
 	cout << "---------------------" << endl
-	     << "F\tPrint tree" << endl
-	     << "L\tList Brothers" << endl
-	     << "O\tPrint line of brother" << endl
-	     << "P\tPrint brother" << endl
+	     << "S\tSearch brother" << endl
 	     << "C\tPrint class/family" << endl
+	     << "T\tPrint tree" << endl
+	     << "O\tPrint line of brother" << endl
+	     << "L\tList Brothers" << endl
 	     << "Q\tQuit" << endl << endl
 	     << "> ";
 }
