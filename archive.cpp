@@ -85,7 +85,7 @@ void archive::printList() const{
 }
 
 void archive::printClass(const std::string& c){
-	bool empty = true;
+	bool empty = true, fam = false;
 
 	for(int i = 0; i < brothers.size(); ++i){
 		if(c == brothers[i]->getYear()){
@@ -101,10 +101,18 @@ void archive::printClass(const std::string& c){
 	if(c == "Rabbit" || c == "Rabbs" || c == "Rabbits"){
 		std::cout << "Rabbits\n-------" << std::endl;
 		printFamily("Tony Geronimos");
-		empty = false;
 	}
+	else if(c == "Mohican" || c == "Mohicans" || c == "Mo"){
+		std::cout << "Mohicans\n--------" << std::endl;
+		printFamily("Jeff Chamlis");
+	}
+	else if(c == "Zebs" || c == "Zebras" || c == "zebs"){
+		std::cout << "Zebs\n----" << std::endl;
+		printFamily("Troy Paolantonio");
+	} else
+		fam = true;
 	
-	if(empty)
+	if(empty || !fam)
 		std::cout << "No brothers found" << std::endl;
 }
 
