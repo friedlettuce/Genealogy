@@ -247,11 +247,16 @@ Sp 99,Thomas Lathrop,Brett Davidson,
 Sp 01,Tony Geronimos,,"Brandi Kent, David Coleman, Jeremy Twachtman, Justin Mils, Kyle Manners"
 Sp 03,Brandi Kent,Tony Geronimos,"Andrea Hatin, Ryan Hiers, Carolyn Steel"
 Sp 03,Jesse Slade,,
-Sp 04,Andrea Hatin,Brandi Kent,Kevin Knight
+Fa 03,David Coleman,Tony Geronimos,
+Sp 04,Jeremy Twachtman,Tony Geronimos,
+Sp 04,Andrea Hatin,Brandi Kent,
 Sp 04,Mark Shilling,,
+Fa 04,Justin Mils,Tony Geronimos,
 Fa 04,Ryan Hiers,Brandi Kent,Dylan Monterino
+Sp 05,Kyle Manners,Tony Geronimos,Amy Alger
 Fa 05,Amy Levenson,,
 Fa 05,Toni Sanchez,,
+Sp 06,Amy Alger,Kyle Manners,Ben Beha
 Sp 06,Josh Autrey,,
 Sp 06,Mark Brosche,,
 Sp 06,Natasha Fortune,,
@@ -262,11 +267,11 @@ Sp 07,Kevin Knight,Andrea Hatin,
 Sp 07,Gillian Lawrick,,
 Sp 07,Chelsea Levine,,
 Sp 07,Christi Lundahl,,
-Sp 07,Carolyn Scheel,,
+Sp 07,Carolyn Steel,Brandi Kent,Wade Stonesifer
 Sp 07,Nathan Smooha,,
 Sp 07,Amanda Steen,,
 Fa 07,Jimmy Towle,,
-Sp 08,Ben Beha,,
+Sp 08,Ben Beha,Amy Alger,Jenn Bruijin
 Sp 08,Justin Brinker,,
 Sp 08,Ryan Denney,,
 Sp 08,Ryan Douglas,,
@@ -276,7 +281,7 @@ Sp 08,Susan Howell,,
 Sp 08,Ciera Markey,,
 Sp 08,Kayla Richburg,,
 Sp 08,Robert Whitehurst,,
-Fa 08,Wade Stonesifer,,
+Fa 08,Wade Stonesifer,Carolyn Steel,Donovan Geradine
 Sp 09,Connie Barroso,,
 Sp 09,Shennie Barroso,,
 Sp 09,Brandon Ehrlich,,Liv Burley
@@ -297,13 +302,16 @@ Sp 10,Kyle Scott,,
 Sp 10,James Smith,,
 Sp 10,Stan Sochacki,,
 Sp 10,Zachary Van Dijk,Andrew Vzral,Steven Zakai
+Fa 10,Jenn Bruijin,Ben Beha,"JT Patrick, Rose Luzader"
 Sp 11,Nick Zegowitz,Dylan Monteiro,Sidney Oser
+Fa 11,JT Patrick,Jenn Bruijin,Matthew Tenore
 Fa 11,Janelle Nicole,,Jeffery Bonany
+Sp 12,Rose Luzader,Jenn Bruijin,"Audrey Allgood, Teddy Branson, Turner Gray, Kristina Loy"
 Sp 12,Sidney Oser,Nick Zegowitz,Zachary Muehleck
 Fa 13,Kim McCaskill,,Cameron Clark
-Sp 13,Matthew Tenore,,Chancer Teel
+Sp 13,Matthew Tenore,JT Patrick,Chancer Teel
 Sp 13,Liv Burley,Brandon Ehlrich,Sean Patterson
-Sp 13,Audrey Allgood,,
+Sp 13,Audrey Allgood,Rose Luzader,Elyse Frezza
 Sp 13,Lilio Camere,,Malinda Williams
 Sp 13,Hayden Elias-Rodriguez,,
 Sp 13,Maggie Tobin,Michael Scarpone,Katie Larkin
@@ -312,11 +320,11 @@ Sp 14,Teddy Branson,Rose Luzader,
 Sp 14,Daniel Boerger,Sam Sugarman,Scarlett Roy
 Sp 14,,Maggie Tobin,
 Sp 14,Jeffery Bonany,Janelle Nicole,
-Sp 14,,Donovan Geradine,
+Sp 14,Zach Miller,Donovan Geradine,Blake Holloway
 Fa 14,Bridget Harper,Steven Zakai,Katie Kirchoff
 Fa 14,Brian Labrec,Ryan Wilhite,Alex Arbiter
 Fa 14,Sean Patterson,Liv Burley,
-Sp 15,Blake Holloway,,
+Sp 15,Blake Holloway,Zach Miller,
 SP 15,Maryann Shirley,,
 Sp 15,Elyse Frezza,Audrey Allgood,Morgan Leamer
 Sp 15,Tiffany Carpenter,Olivia Sanders,Kattie Coffey
@@ -340,6 +348,7 @@ Sp 16,Sheldon Martin,Cameron Clark,Matthew Bolinder
 Sp 16,Elizabeth Frickey,Grace Garratt,Curtis Newsome
 Sp 16 ,Justin Snively,Alex Gonzalez,Brenden Richman
 Sp 16,Jon Lee,Darren Rivera,Belton Morgan
+Fa 16,Turner Gray,Rose Luzader,Sam Creamer
 Fa 16,Katie Coffey,Tiffany Carpenter,Alex Puckett
 Fa 16,Adam Thompson,Jorge Bauzo,Hailey Cruz
 Fa 16,Alex Arbiter,Brian Labrec,Wil Vega
