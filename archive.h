@@ -30,6 +30,6 @@ class archive{
 	
 		void printBanner() const;
 		void printList() const;
-		void printClass(const std::string& c) const;
+		void printClass(const std::string& c);	// Also fams
 };
 #endif

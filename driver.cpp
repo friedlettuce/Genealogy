@@ -84,7 +84,7 @@ void menu(){
 	     << "L\tList Brothers" << endl
 	     << "O\tPrint line of brother" << endl
 	     << "P\tPrint brother" << endl
-	     << "C\tPrint class" << endl
+	     << "C\tPrint class/family" << endl
 	     << "Q\tQuit" << endl << endl
 	     << "> ";
 }
