@@ -31,16 +31,19 @@ int main(int args, char* argsv[]){
 
 		switch(tolower(select)){
 			case 's':
-				Psi.searchBrother(getBrother());
+				Psi.printInfo(
+					Psi.searchBrother(getBrother()));
 				break;
 			case 't':
-				Psi.printFamily(getBrother());
+				Psi.printFamily(
+					Psi.searchBrother(getBrother()));
 				break;
 			case 'l': 	
 				Psi.printList();
 				break;
 			case 'o':
-				Psi.printLine(getBrother());
+				Psi.printLine(
+					Psi.searchBrother(getBrother()));
 				break;
 			case 'c':
 				Psi.printClass(getClass());

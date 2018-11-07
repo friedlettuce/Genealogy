@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include "brother.h"
 #include "archive.h"
 
 archive::~archive(){
@@ -30,31 +31,38 @@ void archive::readFile(std::ifstream& in){
 	in.close();
 }
 
-void archive::searchBrother(const std::string& n){
+brother* archive::searchBrother(const std::string& n){
 	for(int i = 0; i < brothers.size(); ++i){
-		if(i == 0)
-			printBanner();
 		if(brothers[i]->getName().find(n) != std::string::npos)
-			brothers[i]->printInfo();
+			return brothers[i];
+	}
+	return nullptr;
+}
+
+void archive::printInfo(brother* b) const{ 
+	if(b == nullptr || !isBro(b)){
+		std::cout << "Brother not found" << std::endl;
+		return;
+	} else{
+		printBanner();
+		b->printInfo();
 	}
 }
 
-void archive::printLine(const std::string& n){
-	if(!isBro(n)){
+void archive::printLine(brother* b) const{
+	if(!isBro(b)){
 		std::cout << "Brother not found" << std::endl;
 		return;
-	}
-
-	brothers[big]->printLine(brothers[big]);
+	} else
+		b->printLine(b);
 }
 
-void archive::printFamily(const std::string& n){
-	if(!isBro(n)){
+void archive::printFamily(brother* b) const{
+	if(!isBro(b)){
 		std::cout << "Brother not found" << std::endl;
 		return;
-	}
-
-	brothers[big]->printTree(brothers[big], 0);
+	} else
+		b->printTree(b, 0);
 }
 
 void archive::printBanner() const{
@@ -99,15 +107,15 @@ void archive::printClass(const std::string& c){
 
 	if(c == "Rabbit" || c == "Rabbs" || c == "Rabbits"){
 		std::cout << "Rabbits\n-------" << std::endl;
-		printFamily("Tony Geronimos");
+		printFamily(searchBrother("Tony Geronimos"));
 	}
 	else if(c == "Mohican" || c == "Mohicans" || c == "Mo"){
 		std::cout << "Mohicans\n--------" << std::endl;
-		printFamily("Jeff Chamlis");
+		printFamily(searchBrother("Jeff Chamlis"));
 	}
 	else if(c == "Zebs" || c == "Zebras" || c == "zebs"){
 		std::cout << "Zebs\n----" << std::endl;
-		printFamily("Troy Paolantonio");
+		printFamily(searchBrother("Troy Paolantonio"));
 	} else
 		fam = true;
 	
@@ -127,6 +135,17 @@ bool archive::isBro(const std::string& name){
 			big = i;
 			return true;
 		}
+	}
+	return false;
+}
+
+bool archive::isBro(const brother* b) const{
+	if(b == nullptr)
+		return false;
+
+	for(auto bro : brothers){
+		if(b->getName() == bro->getName())
+			return true;
 	}
 	return false;
 }

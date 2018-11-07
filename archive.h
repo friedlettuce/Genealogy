@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
-#include "family.h"
+#include "brother.h"
 
 class archive{
 	private:
@@ -12,6 +12,7 @@ class archive{
 
 		// Checks if brother exists in brothers
 		bool isBro(const std::string& name);
+		bool isBro(const brother* b) const;
 		bool isLittle(const std::string& name);
 		int big, lil;	// Helper indexing values
 
@@ -24,9 +25,11 @@ class archive{
 		~archive();
 		void readFile(std::ifstream& in);
 
-		void searchBrother(const std::string& n);
-		void printLine(const std::string& n);
-		void printFamily(const std::string& n);
+		brother* searchBrother(const std::string& n);
+
+		void printInfo(brother* b) const;
+		void printLine(brother* b) const;
+		void printFamily(brother* b) const;
 	
 		void printBanner() const;
 		void printList() const;

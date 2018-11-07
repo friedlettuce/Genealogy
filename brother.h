@@ -32,19 +32,5 @@ class brother{
 		void printInfo() const;
 		void printLine(brother* current);
 		void printTree(brother* current, const int& indent);
-
-		friend bool operator==(const brother& cmp1, 
-			const brother& cmp2);
-		friend bool operator!=(const brother& cmp1, 
-			const brother& cmp2);
-};
-
-// Tree implementation of family
-
-class family{
-	private:
-		brother* root;
-	public:
-		family(brother* rt);	
 };
 #endif
