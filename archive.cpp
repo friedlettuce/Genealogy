@@ -108,14 +108,15 @@ void archive::printClass(const std::string& c){
 	if(c == "Rabbit" || c == "Rabbs" || c == "Rabbits"){
 		std::cout << "Rabbits\n-------" << std::endl;
 		printFamily(searchBrother("Tony Geronimos"));
-	}
-	else if(c == "Mohican" || c == "Mohicans" || c == "Mo"){
+	} else if(c == "Mohican" || c == "Mohicans" || c == "Mo"){
 		std::cout << "Mohicans\n--------" << std::endl;
 		printFamily(searchBrother("Jeff Chamlis"));
-	}
-	else if(c == "Zebs" || c == "Zebras" || c == "zebs"){
+	} else if(c == "Zebs" || c == "Zebras" || c == "zebs"){
 		std::cout << "Zebs\n----" << std::endl;
 		printFamily(searchBrother("Troy Paolantonio"));
+	} else if(c == "Pandas" || c == "Platinum"){
+		std::cout << "Pandas\n------" << std::endl;
+		printFamily(searchBrother("Michael Weintraub"));
 	} else
 		fam = true;
 	
