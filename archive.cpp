@@ -92,18 +92,36 @@ void archive::printList() const{
 }
 
 void archive::printClass(const std::string& c){
-	bool empty = true, fam = false;
+	bool empty = true;
+	
+	std::istringstream strs(c);
+    	std::string sem, yr, n;
+    	strs >> sem;
+    	strs >> yr;
+
+    	if(sem == "fa" || sem == "Fa" || sem == "Fall" || sem == "fall")
+        	sem = "Fa";
+	else if(sem == "sp" || sem == "Sp" || sem == "Spring" || sem == "spring")
+        	sem = "Sp";
+	if(yr.length() > 2)
+		yr = yr.substr(2,4);
+
+	n = sem + ' ' + yr;
 
 	for(int i = 0; i < brothers.size(); ++i){
-		if(c == brothers[i]->getYear()){
+		if(n == brothers[i]->getYear()){
 			if(empty){
 				printBanner();
 				empty = false;
 			}
-
 			brothers[i]->printInfo();
 		}
 	}
+
+	if(!empty)
+		return;
+	else
+		empty = false;
 
 	if(c == "Rabbit" || c == "Rabbs" || c == "Rabbits"){
 		std::cout << "Rabbits\n-------" << std::endl;
@@ -118,9 +136,9 @@ void archive::printClass(const std::string& c){
 		std::cout << "Pandas\n------" << std::endl;
 		printFamily(searchBrother("Michael Weintraub"));
 	} else
-		fam = true;
+		empty = true;
 	
-	if(empty || !fam)
+	if(empty)
 		std::cout << "No brothers found" << std::endl;
 }
 
