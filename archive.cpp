@@ -108,7 +108,9 @@ void archive::printClass(const std::string& c){
 
 	n = sem + ' ' + yr;
 
-	for(int i = 0; i < brothers.size(); ++i){
+	for(int i = n.length() == 5 ? 0 : brothers.size();
+		i < brothers.size(); ++i){
+		
 		if(n == brothers[i]->getYear()){
 			if(empty){
 				printBanner();
