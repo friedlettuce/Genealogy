@@ -371,6 +371,7 @@ Sp 00,John Buckley,Michael Greenman,"Brian Stafford, Jonathan Maerkl"
 Sp 00,Garrett Smith,Brandon Selph,Candis Castorani
 Fa 00,Wences Troncoso,Michael Greenman,
 Fa 00,Brian Stafford,John Buckley,Daniel Goschke
+Sp 01,Jennifer Harris,,Jesse Slade
 Sp 01,Jonathan Maerkl,John Buckley,
 Sp 01,Daniel Goschke,Brian Stafford,
 Sp 01,Candis Castorani,Garrett Smith,Jeff Chamlis
@@ -381,9 +382,11 @@ Fa 01,Briana Meder,Troy Paolantonio,Jimmy Burke
 Sp 02,Brett Pikuritz,Troy Paolantonio,Amanda Bork
 Sp 02,Jimmy Burke,Briana Meder,"Anthony Quendo, Jon Chipperfield, Matthew Shapiro"
 Fa 02,Amanda Bork,Brett Pikuritz,Melissa Johnson
+Sp 03,Joe Gerstenfield,,"Kevin Brown, Mark Shilling, Mike Wilson"
 Sp 03,Jeff Chamlis,Candis Castorani,Mary Herman
 Sp 03,Brandi Kent,Tony Geronimos,"Andrea Hatin, Ryan Hiers, Carolyn Steel"
-Sp 03,Jesse Slade,,
+Sp 03,Jesse Slade,Jennifer Harris,
+Fa 03,Kevin Brown,Joe Gerstenfield,
 Fa 03,Kali Gray,Shawn Wallace,Joshua Sall
 Fa 03,Melissa Johnson,Amanda Bork,Joel Heller
 Fa 03,Paul Fiorello,Joe Barber,
@@ -391,7 +394,8 @@ Fa 03,David Coleman,Tony Geronimos,
 Sp 04,Anthony Quendo,Jimmy Burke,"Dan Farr, Toni Sanchez, Martin Avey, Blake Garcia"
 Sp 04,Jeremy Twachtman,Tony Geronimos,
 Sp 04,Andrea Hatin,Brandi Kent,
-Sp 04,Mark Shilling,,
+Sp 04,Mark Shilling,Joe Gerstenfield,
+Fa 04,Mike Wilson,Joe Gerstenfield,
 Fa 04,Joshua Sall,Kali Gray,Michael Weintraub
 Fa 04,Jon Chipperfield,Jimmy Burke,
 Fa 04,Justin Mils,Tony Geronimos,
