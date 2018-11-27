@@ -125,19 +125,21 @@ void archive::printClass(const std::string& c){
 	else
 		empty = false;
 
-	if(c == "Rabbit" || c == "Rabbs" || c == "Rabbits"){
-		std::cout << "Rabbits\n-------" << std::endl;
-		printFamily(searchBrother("Tony Geronimos"));
-	} else if(c == "Mohican" || c == "Mohicans" || c == "Mo"){
-		std::cout << "Mohicans\n--------" << std::endl;
-		printFamily(searchBrother("Jeff Chamlis"));
-	} else if(c == "Zebs" || c == "Zebras" || c == "zebs"){
-		std::cout << "Zebs\n----" << std::endl;
-		printFamily(searchBrother("Troy Paolantonio"));
-	} else if(c == "Pandas" || c == "Platinum"){
-		std::cout << "Pandas\n------" << std::endl;
-		printFamily(searchBrother("Michael Weintraub"));
-	} else
+	if((n.find("Rab") != std::string::npos) ||
+       	   	(n.find("rab") != std::string::npos)){
+        	printFamily(searchBrother("Tony Geronimos"));
+    	} else if((n.find("Mo") != std::string::npos) ||
+              	(n.find("mo") != std::string::npos)){
+        	printFamily(searchBrother("Jeff Chamlis"));
+    	} else if((n.find("Zeb") != std::string::npos) ||
+              	(n.find("zeb") != std::string::npos)){
+        	printFamily(searchBrother("Troy Paolantonio"));
+    	} else if((n.find("Panda") != std::string::npos) ||
+        	(n.find("panda") != std::string::npos) ||
+		(n.find("platinum") != std::string::npos) ||
+                (n.find("Platinum") != std::string::npos)){
+        	printFamily(searchBrother("Michael Weintraub"));
+    	} else
 		empty = true;
 	
 	if(empty)
