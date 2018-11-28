@@ -385,16 +385,18 @@ Fa 02,Amanda Bork,Brett Pikuritz,Melissa Johnson
 Sp 03,Joe Gerstenfield,,"Kevin Brown, Mark Shilling, Mike Wilson"
 Sp 03,Jeff Chamlis,Candis Castorani,Mary Herman
 Sp 03,Brandi Kent,Tony Geronimos,"Andrea Hatin, Ryan Hiers, Carolyn Steel"
-Sp 03,Jesse Slade,Jennifer Harris,
+Sp 03,Jesse Slade,Jennifer Harris,"Brad Beck, Matthew Williams, Amy Levenson, Natasha Fortune"
 Fa 03,Kevin Brown,Joe Gerstenfield,
 Fa 03,Kali Gray,Shawn Wallace,Joshua Sall
 Fa 03,Melissa Johnson,Amanda Bork,Joel Heller
 Fa 03,Paul Fiorello,Joe Barber,
 Fa 03,David Coleman,Tony Geronimos,
+Sp 04,Brad Beck,Jesse Slade,
 Sp 04,Anthony Quendo,Jimmy Burke,"Dan Farr, Toni Sanchez, Martin Avey, Blake Garcia"
 Sp 04,Jeremy Twachtman,Tony Geronimos,
 Sp 04,Andrea Hatin,Brandi Kent,
 Sp 04,Mark Shilling,Joe Gerstenfield,
+Fa 04,Matthew Williams,Jesse Slade,"Cristen Creazzo, Ryan Douglas"
 Fa 04,Mike Wilson,Joe Gerstenfield,
 Fa 04,Joshua Sall,Kali Gray,Michael Weintraub
 Fa 04,Jon Chipperfield,Jimmy Burke,
@@ -403,15 +405,16 @@ Fa 04,Ryan Hiers,Brandi Kent,Dylan Monteiro
 Sp 05,Matthew Shapiro,Jimmy Burke,
 Sp 05,Dan Farr,Anthony Quendo,"Josh Autrey, Christi Lundahl"
 Sp 05,Kyle Manners,Tony Geronimos,Amy Alger
+Fa 05,Cristen Creazzo,Matthew Williams,
 Fa 05,Joel Heller,Melissa Johnson,Matthew Hunter
-Fa 05,Amy Levenson,,
+Fa 05,Amy Levenson,Jesse Slade,"Nathan Smooha, Jimmy Alexander"
 Fa 05,Toni Sanchez,Anthony Quendo,Jayson Powers
 Sp 06,Martin Avey,Anthony Quendo,Robert Whitehurst
 Sp 06,Mary Herman,Jeff Chamlis,Gillian Lawrick
 Sp 06,Amy Alger,Kyle Manners,Ben Beha
 Sp 06,Josh Autrey,Dan Farr,Kayla Richburg
 Sp 06,Mark Brosche,,
-Sp 06,Natasha Fortune,,
+Sp 06,Natasha Fortune,Jesse Slade,Hogan Smith
 Sp 06,Dan Taylor,,
 Sp 06,Andrew Vzral,,Zachary Van Dijk
 Sp 06,Michael Weintraub,Joshua Sall,"Susan Howell, Michael Scarpone"
@@ -421,23 +424,25 @@ Sp 07,Gillian Lawrick,Mary Herman,"Jeff Ethier, Caeli Hill"
 Sp 07,Chelsea Levine,,
 Sp 07,Christi Lundahl,Dan Farr,
 Sp 07,Carolyn Steel,Brandi Kent,Wade Stonesifer
-Sp 07,Nathan Smooha,,
+Sp 07,Nathan Smooha,Amy Levenson,Amber Ferguson
 Sp 07,Amanda Steen,,
 Fa 07,Jonathan Alvernaz,Joel Heller,
 Fa 07,Blake Garcia,,
 Fa 07,Jimmy Towle,,
+Sp 08,Hogan Smith,Natasha Fortune,
 Sp 08,Ben Beha,Amy Alger,Jenn Bruijin
 Sp 08,Justin Brinker,,
 Sp 08,Ryan Denney,Joel Heller,Kyle Scott
-Sp 08,Ryan Douglas,,
+Sp 08,Ryan Douglas,Matthew Williams,Connie Barroso
 Sp 08,Andy Dubbert,,
 Sp 08,Caeli Hill,Gillian Lawrick,James Smith
 Sp 08,Susan Howell,Michael Weintraub,Jonathan Bonura
 Sp 08,Ciera Markey,Andrew McDonald,Brandon Ehrlich
 Sp 08,Kayla Richburg,Josh Autrey,Alex Johnson
 Sp 08,Robert Whitehurst,Martin Avey,"Shennie Barroso, Jordan Rochester"
+Fa 08,Jimmy Alexander,Amy Levenson,
 Fa 08,Wade Stonesifer,Carolyn Steel,Donovan Geradine
-Sp 09,Connie Barroso,,
+Sp 09,Connie Barroso,Ryan Douglas,"Anthony Love, Judy Rinella"
 Sp 09,Shennie Barroso,Robert Whitehurst,"Stan Sochacki, Kathy Boener, Hayden Elias-Rodriguez"
 Sp 09,Brandon Ehrlich,Ciera Markey,Liv Burley
 Sp 09,Matthew Hunter,Joel Heller,
@@ -447,7 +452,7 @@ Sp 09,Jayson Powers,Toni Sanchez,
 Sp 09,Michael Scarpone,Michael Weintraub,"Maggie Tobin, Adam Quintanilla"
 Sp 09,Nazarelle Van Putte,,
 Fa 09,Jonathan Bonura,Susan Howell,Ryan Beretta
-Fa 09,Amber Ferguson,,
+Fa 09,Amber Ferguson,Nathan Smooha,Eric Pablo Elias-Rodriguez
 Fa 09,Alex Johnson,Kayla Richburg,Matthew Mederos
 Fa 09,Dean Wagman,,
 Sp 10,Harris Dubin,,
@@ -457,6 +462,7 @@ Sp 10,Kyle Scott,Ryan Denney,Cheyenne Spurlock
 Sp 10,James Smith,Caeli Hill,"Gregory Abramowitz, Charles Kelly"
 Sp 10,Stan Sochacki,Shennie Barroso,Tyler Kirby
 Sp 10,Zachary Van Dijk,Andrew Vzral,Steven Zakai
+Fa 10,Eric Pablo Elias-Rodriguez,Amber Ferguson,"Rodney Carroll, Kim McCaskill"
 Fa 10,Ryan Beretta,Jonathan Bonura,
 Fa 10,Jenn Bruijin,Ben Beha,"JT Patrick, Rose Luzader"
 Sp 11,Gregory Abramowitz,James Smith,"Sam Sugarman, Ryan Wilhite"
@@ -464,21 +470,21 @@ Sp 11,Matthew Mederos,Alex Johnson,Charles Hernandez
 Sp 11,Jordan Rochester,Robert Whitehurst,
 Sp 11,Donovan Geradine,Wade Stonesifer,Zach Miller
 Sp 11,Nick Zegowitz,Dylan Monteiro,Sidney Oser
+Fa 11,Anthony Love,Connie Barroso,Nicole Scalise
 Fa 11,Cheyenne Spurlock,Kyle Scott,Colleen Sochacki
 Fa 11,JT Patrick,Jenn Bruijin,Matthew Tenore
 Fa 11,Janelle Nicole,,Jeffery Bonany
+Sp 12,Rodney Carroll,Eric Pablo Elias-Rodriguez,Jorge Bauzo
 Sp 12,Charles Kelly,James Smith,
 Sp 12,Benjamin Mock,Jeff Ethier,"Benjamin Maryland, Dalton Smith"
 Sp 12,Rose Luzader,Jenn Bruijin,"Audrey Allgood, Teddy Branson, Turner Gray, Kristina Loy"
 Sp 12,Sidney Oser,Nick Zegowitz,Zachary Muehleck
+Fa 12,Nicole Scalise,Anthony Love,Olivia Sanders
 Fa 12,Gregory Fobes,Adam Quintanilla,Darren Rivera
 Fa 12,Ryan Wilhite,Gregory Abramowitz,Brian Labrec
 Fa 12,Steven Zakai,Zachary Van Dijk,Bridget Harper
 Fa 12,Kathy Boener,Shennie Barroso,
-Fa 13,Darren Rivera,Gregory Fobes,"Hannah Pucciarelli, Jonathan Lee"
-Fa 13,Dalton Smith,Benjamin Mock,Elayna Youngson
-Fa 13,Charles Hernandez,Matthew Mederos,
-Fa 13,Kim McCaskill,,Cameron Clark
+Sp 13,Judy Rinella,Connie Barroso,
 Sp 13,Tyler Kirby,Stan Sochacki,"Alex Gonzalez, Maryann Shirley"
 Sp 13,Colleen Sochacki,Cheyenne Spurlock,Grace Garratt
 Sp 13,Matthew Tenore,JT Patrick,Chancer Teel
@@ -488,6 +494,11 @@ Sp 13,Lilio Camere,Adam Quintanilla,Malinda Williams
 Sp 13,Hayden Elias-Rodriguez,Shennie Barroso,Ashley Jeanty
 Sp 13,Maggie Tobin,Michael Scarpone,"Katie Larkin, Andrew Burk"
 Sp 13,Sam Sugarman,Gregory Abramowitz,Daniel Boerger
+Fa 13,Olivia Sanders,Nicole Scalise,Tiffany Carpenter
+Fa 13,Darren Rivera,Gregory Fobes,"Hannah Pucciarelli, Jonathan Lee"
+Fa 13,Dalton Smith,Benjamin Mock,Elayna Youngson
+Fa 13,Charles Hernandez,Matthew Mederos,
+Fa 13,Kim McCaskill,Eric Pablo Elias-Rodriguez,Cameron Clark
 Sp 14,Alex Gonzalez,Tyler Kirby,Justin Snively
 Sp 14,Teddy Branson,Rose Luzader,
 Sp 14,Daniel Boerger,Sam Sugarman,Scarlett Roy
@@ -501,7 +512,7 @@ Sp 15,Benjamin Maryland,Benjamin Mock,"Kaman Bipat, Houston Luzader"
 Sp 15,Blake Holloway,Zach Miller,
 Sp 15,Maryann Shirley,Tyler Kirby,
 Sp 15,Elyse Frezza,Audrey Allgood,Morgan Leamer
-Sp 15,Tiffany Carpenter,Olivia Sanders,Kattie Coffey
+Sp 15,Tiffany Carpenter,Olivia Sanders,Katie Coffey
 Sp 15,Katie Larkin,Maggie Tobin,Regan Williams
 Sp 15,Malinda Williams,Lilio Camere,
 Sp 15,Michael Kerr,,
