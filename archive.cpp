@@ -139,7 +139,10 @@ void archive::printClass(const std::string& c){
 		(n.find("platinum") != std::string::npos) ||
                 (n.find("Platinum") != std::string::npos)){
         	printFamily(searchBrother("Michael Weintraub"));
-    	} else
+    	} else if((n.find("Possum") != std::string::npos) ||
+		(n.find("possum") != std::string::npos)){
+		printFamily(searchBrother("Jennifer Harris"));
+	}else
 		empty = true;
 	
 	if(empty)
