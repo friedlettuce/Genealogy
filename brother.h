@@ -10,6 +10,8 @@ class brother{
 		brother* big;
 		std::vector<brother*> littles;
 
+		const int INDENT = 4;
+
 		std::string indent(const int& id) const;
 	public:
 		brother();
