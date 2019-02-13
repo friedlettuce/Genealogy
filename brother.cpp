@@ -57,8 +57,8 @@ std::string brother::getYear() const{ return year; }
 std::string brother::getName() const{ return name; }
 std::string brother::getBig() const{ return big->name; }
 
-bool brother::relatedTo(brother* current, const std::string& n) const{
-	brother* tmp = current;
+bool brother::relatedTo(const brother* current, const std::string& n) const{
+	const brother* tmp = current;
 
 	while(current != nullptr){
 		if(current->name == n)
@@ -71,7 +71,7 @@ bool brother::relatedTo(brother* current, const std::string& n) const{
 	return relaTree(current, n);
 }
 
-bool brother::relaTree(brother* current, const std::string& n) const{
+bool brother::relaTree(const brother* current, const std::string& n) const{
 	if(current->name == n)
 		return true;
 
@@ -106,24 +106,7 @@ void brother::printLine(brother* current){
 	}
 	
 	std::cout << current->year << " - " << current->name; 
-
-	if(relatedTo(current, "Jennifer Harris"))
-		std::cout << "\033[1;32m - Possum\033[0m";
-	if(relatedTo(current, "Jeff Chamlis"))
-		std::cout << "\033[1;35m - Mohecian\033[0m";
-	if(relatedTo(current, "Troy Paolantonio")){
-		if(relatedTo(current, "Briana Meder"))
-			std::cout << "\033[1;30m - Zeb\033[0m";
-		else
-			std::cout << "\033[1;37m - Zeb\033[0m";
-	}
-	if(relatedTo(current, "Tony Geronimos"))
-		std::cout << "\033[1;33m - Rabbit\033[0m";
-	if(relatedTo(current, "Josh Willoughby"))
-		std::cout << "\033[1;34m - Whale\033[0m";
-	if(relatedTo(current, "Michael Weintraub"))
-		std::cout << "\033[1;31m - Panda\033[0m";
-	
+	famLabel(current);	
 	std::cout << std::endl;
 }
 
@@ -133,24 +116,7 @@ void brother::printTree(brother* current, const int& id){
 
 	// Prints indented name
 	std::cout << indent(id-3) << current->name;
-	
-	if(relatedTo(current, "Jennifer Harris"))
-		std::cout << "\033[1;32m - Possum\033[0m";
-	if(relatedTo(current, "Jeff Chamlis"))
-		std::cout << "\033[1;35m - Mohecian\033[0m";
-	if(relatedTo(current, "Troy Paolantonio")){
-		if(relatedTo(current, "Briana Meder"))
-			std::cout << "\033[1;30m - Zeb\033[0m";
-		else
-			std::cout << "\033[1;37m - Zeb\033[0m";
-	}
-	if(relatedTo(current, "Tony Geronimos"))
-		std::cout << "\033[1;33m - Rabbit\033[0m";
-	if(relatedTo(current, "Josh Willoughby"))
-		std::cout << "\033[1;34m - Whale\033[0m";
-	if(relatedTo(current, "Michael Weintraub"))
-		std::cout << "\033[1;31m - Panda\033[0m";
-
+	famLabel(current);
 	std::cout << " (" << current->year << ')' << std::endl;
 
 	for(auto lil : current->littles){
@@ -187,9 +153,32 @@ int brother::lilSize() const{ return littles.size(); }
 
 // Prints general info of brother
 void brother::printInfo() const{
-	std::cout << std::left << std::setw(6) << year 
-		  << std::setw(25) << name 
-		  << std::setw(25) << (big == nullptr ? "" : big->name);
+	std::cout << std::left << std::setw(6) << year;
+	const brother* current = this;
+
+	if(COLOR){
+		if(relatedTo(current, "Jennifer Harris"))
+			std::cout << "\033[1;32m";
+		if(relatedTo(current, "Jeff Chamlis"))
+			std::cout << "\033[1;35m";
+		if(relatedTo(current, "Troy Paolantonio")){
+			if(relatedTo(current, "Briana Meder"))
+				std::cout << "\033[1;30m";
+			else
+				std::cout << "\033[1;37m";
+		}
+		if(relatedTo(current, "Tony Geronimos"))
+			std::cout << "\033[1;33m";
+		if(relatedTo(current, "Josh Willoughby"))
+			std::cout << "\033[1;34m";
+		if(relatedTo(current, "Michael Weintraub"))
+			std::cout << "\033[1;31m";
+	}
+
+	std::cout << std::setw(25) << name;
+	if(COLOR)
+		std::cout << "\033[0m";
+	std::cout << std::setw(25) << (big == nullptr ? "" : big->name);
 	
 	if(littles.size() == 0)
 		std::cout << std::endl;
@@ -213,4 +202,24 @@ std::string brother::indent(const int& id) const{
 	for(int i = 0; i < id; ++i)
 		tmp += ' ';
 	return tmp;
+}
+
+// Prints the family label next to name
+void brother::famLabel(const brother* current) const{
+	if(relatedTo(current, "Jennifer Harris"))
+		std::cout << "\033[1;32m - Possum\033[0m";
+	if(relatedTo(current, "Jeff Chamlis"))
+		std::cout << "\033[1;35m - Mohecian\033[0m";
+	if(relatedTo(current, "Troy Paolantonio")){
+		if(relatedTo(current, "Briana Meder"))
+			std::cout << "\033[1;30m - Zeb\033[0m";
+		else
+			std::cout << "\033[1;37m - Zeb\033[0m";
+	}
+	if(relatedTo(current, "Tony Geronimos"))
+		std::cout << "\033[1;33m - Rabbit\033[0m";
+	if(relatedTo(current, "Josh Willoughby"))
+		std::cout << "\033[1;34m - Whale\033[0m";
+	if(relatedTo(current, "Michael Weintraub"))
+		std::cout << "\033[1;31m - Panda\033[0m";
 }
