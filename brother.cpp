@@ -76,10 +76,10 @@ void brother::printLine(brother* current){
 	if(current->big != nullptr){
 		printLine(current->big);
 	
-		std::cout << "  ^" << std::endl
-			  << "  |" << std::endl;
+		std::cout << "\t    ^" << std::endl
+			  << "\t    |" << std::endl;
 	}
-	std::cout << current->name << std::endl;
+	std::cout << current->year << " - " << current->name << std::endl;
 }
 
 // Prints family of brother recursively
@@ -87,7 +87,8 @@ void brother::printTree(brother* current, const int& id){
 	bool fLil = false;
 
 	// Prints indented name
-	std::cout << indent(id-3) << current->name << std::endl;
+	std::cout << indent(id-3) << current->name << " ("
+		  << current->year << ')' << std::endl;
 
 	for(auto lil : current->littles){
 		if(!fLil){
@@ -101,7 +102,8 @@ void brother::printTree(brother* current, const int& id){
 			printTree(lil, id+INDENT);
 		} else{
 			std::cout << std::endl << indent(id-3);
-			std::cout << current->name << std::endl;
+			std::cout << current->name << " ("
+				  << current->year << ')' << std::endl;
 			std::cout << indent(id);
 			std::cout << "     ^" << std::endl;
 			std::cout << indent(id)

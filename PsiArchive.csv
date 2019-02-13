@@ -73,6 +73,7 @@ Sp 80,Kevin Rolinson,,
 Fa 80,Bob Thurston,Richard Adams,
 Sp 81,Mike Campbell,Joseph Bowens,Kevin
 Fa 81,Thomas Larson,,Louis St. Laurent
+Sp 82,Larry Clark,,Chris Lawrence
 Sp 82,Dave Mason,,Chris Brugger
 Sp 82,Jim Taylor,Jon Korman,Joe Williams
 ,,,Sandy Forseth
@@ -364,25 +365,31 @@ Fa 99,Micha Faw,Joe McClure,
 Fa 99,Troy Paolantonio,Brad Ruth,"Briana Meder, Brett Pikuritz"
 Fa 99,Yaany Alas,Bryan Jones,
 Fa 99,Stefania Sensi,Ilene Lederman,Amy Gode
+Sp 00,Joey Monahan,Jason Millhouse,Michael Hancock
+Sp 00,Geraldine Binnger,Jack Eaddy,Josh Willoughby
 Sp 00,AJ Makielski,Whitney Smith,Shawn Wallace
 Sp 00,Chris Graham,Joe McClure,
 Sp 00,Sarah Carr,Daniel Gilland,Andrew Jackson
 Sp 00,John Buckley,Michael Greenman,"Brian Stafford, Jonathan Maerkl"
 Sp 00,Garrett Smith,Brandon Selph,Candis Castorani
+Fa 00,Stanley Jones,Jack Eaddy,
 Fa 00,Wences Troncoso,Michael Greenman,
 Fa 00,Brian Stafford,John Buckley,Daniel Goschke
+Sp 01,Josh Willoughby,Geraldine Binnger,Joe Gerstenfield
+Sp 01,Michael Hancock,Joey Monahan,
 Sp 01,Jennifer Harris,,Jesse Slade
 Sp 01,Jonathan Maerkl,John Buckley,
 Sp 01,Daniel Goschke,Brian Stafford,
 Sp 01,Candis Castorani,Garrett Smith,Jeff Chamlis
 Sp 01,Amy Gode,Stefania Sensi,
 Sp 01,Tony Geronimos,,"Brandi Kent, David Coleman, Jeremy Twachtman, Justin Mils, Kyle Manners"
+Fa 01,Gabe Arnold,Jack Eaddy,
 Fa 01,Shawn Wallace,AJ Makielski,Kali Gray
 Fa 01,Briana Meder,Troy Paolantonio,Jimmy Burke
 Sp 02,Brett Pikuritz,Troy Paolantonio,Amanda Bork
 Sp 02,Jimmy Burke,Briana Meder,"Anthony Quendo, Jon Chipperfield, Matthew Shapiro"
 Fa 02,Amanda Bork,Brett Pikuritz,Melissa Johnson
-Sp 03,Joe Gerstenfield,,"Kevin Brown, Mark Shilling, Mike Wilson"
+Sp 03,Joe Gerstenfield,Josh Willoughby,"Kevin Brown, Mark Shilling, Mike Wilson"
 Sp 03,Jeff Chamlis,Candis Castorani,Mary Herman
 Sp 03,Brandi Kent,Tony Geronimos,"Andrea Hatin, Ryan Hiers, Carolyn Steel"
 Sp 03,Jesse Slade,Jennifer Harris,"Brad Beck, Matthew Williams, Amy Levenson, Natasha Fortune"
@@ -395,13 +402,14 @@ Sp 04,Brad Beck,Jesse Slade,
 Sp 04,Anthony Quendo,Jimmy Burke,"Dan Farr, Toni Sanchez, Martin Avey, Blake Garcia"
 Sp 04,Jeremy Twachtman,Tony Geronimos,
 Sp 04,Andrea Hatin,Brandi Kent,
-Sp 04,Mark Shilling,Joe Gerstenfield,
+Sp 04,Mark Shilling,Joe Gerstenfield,"Andrew McDonald, Andrew Vrzal"
 Fa 04,Matthew Williams,Jesse Slade,"Cristen Creazzo, Ryan Douglas"
 Fa 04,Mike Wilson,Joe Gerstenfield,
 Fa 04,Joshua Sall,Kali Gray,Michael Weintraub
 Fa 04,Jon Chipperfield,Jimmy Burke,
 Fa 04,Justin Mils,Tony Geronimos,
 Fa 04,Ryan Hiers,Brandi Kent,Dylan Monteiro
+Sp 05,Andrew McDonald,Mark Shilling,Ciera Markey
 Sp 05,Matthew Shapiro,Jimmy Burke,
 Sp 05,Dan Farr,Anthony Quendo,"Josh Autrey, Christi Lundahl"
 Sp 05,Kyle Manners,Tony Geronimos,Amy Alger
@@ -416,7 +424,7 @@ Sp 06,Josh Autrey,Dan Farr,Kayla Richburg
 Sp 06,Mark Brosche,,
 Sp 06,Natasha Fortune,Jesse Slade,Hogan Smith
 Sp 06,Dan Taylor,,
-Sp 06,Andrew Vzral,,Zachary Van Dijk
+Sp 06,Andrew Vrzal,Mark Shilling,"Amanda Steen, Zachary Van Dijk"
 Sp 06,Michael Weintraub,Joshua Sall,"Susan Howell, Michael Scarpone"
 Sp 07,Christina Busto,Toni Sanchez,
 Sp 07,Kevin Knight,Andrea Hatin,
@@ -425,7 +433,7 @@ Sp 07,Chelsea Levine,,
 Sp 07,Christi Lundahl,Dan Farr,
 Sp 07,Carolyn Steel,Brandi Kent,Wade Stonesifer
 Sp 07,Nathan Smooha,Amy Levenson,Amber Ferguson
-Sp 07,Amanda Steen,,
+Sp 07,Amanda Steen,Andrew Vrzal,"Andy Dubbert, Kaylie Kisiel"
 Fa 07,Jonathan Alvernaz,Joel Heller,
 Fa 07,Blake Garcia,,
 Fa 07,Jimmy Towle,,
@@ -434,19 +442,19 @@ Sp 08,Ben Beha,Amy Alger,Jenn Bruijin
 Sp 08,Justin Brinker,,
 Sp 08,Ryan Denney,Joel Heller,Kyle Scott
 Sp 08,Ryan Douglas,Matthew Williams,Connie Barroso
-Sp 08,Andy Dubbert,,
+Sp 08,Andy Dubbert,Amanda Steen,Dean Wagman
 Sp 08,Caeli Hill,Gillian Lawrick,James Smith
 Sp 08,Susan Howell,Michael Weintraub,Jonathan Bonura
-Sp 08,Ciera Markey,Andrew McDonald,Brandon Ehlrich
+Sp 08,Ciera Markey,Andrew McDonald,"Emmy Carr, Brandon Ehrlich"
 Sp 08,Kayla Richburg,Josh Autrey,Alex Johnson
 Sp 08,Robert Whitehurst,Martin Avey,"Shennie Barroso, Jordan Rochester"
 Fa 08,Jimmy Alexander,Amy Levenson,
 Fa 08,Wade Stonesifer,Carolyn Steel,Donovan Geradine
 Sp 09,Connie Barroso,Ryan Douglas,"Anthony Love, Judy Rinella"
 Sp 09,Shennie Barroso,Robert Whitehurst,"Stan Sochacki, Kathy Boener, Hayden Elias-Rodriguez"
-Sp 09,Brandon Ehlrich,Ciera Markey,Liv Burley
+Sp 09,Brandon Ehrlich,Ciera Markey,"Liv Burley, Harris Dubin"
 Sp 09,Matthew Hunter,Joel Heller,
-Sp 09,Kaylie Kisiel,,
+Sp 09,Kaylie Kisiel,Amanda Steen,
 Sp 09,Dylan Monteiro,Ryan Hiers,Nick Zegowitz
 Sp 09,Jayson Powers,Toni Sanchez,
 Sp 09,Michael Scarpone,Michael Weintraub,"Maggie Tobin, Adam Quintanilla"
@@ -454,14 +462,15 @@ Sp 09,Nazarelle Van Putte,,
 Fa 09,Jonathan Bonura,Susan Howell,Ryan Beretta
 Fa 09,Amber Ferguson,Nathan Smooha,Eric Pablo Elias-Rodriguez
 Fa 09,Alex Johnson,Kayla Richburg,Matthew Mederos
-Fa 09,Dean Wagman,,
-Sp 10,Harris Dubin,,
+Fa 09,Dean Wagman,Andy Dubbert,
+Sp 10,Harris Dubin,Brandon Ehrlich,
 Sp 10,Jeff Ethier,Gillian Lawrick,Benjamin Mock
 Sp 10,Adam Quintanilla,Michael Scarpone,"Gregory Fobes, Lilio Camere"
 Sp 10,Kyle Scott,Ryan Denney,Cheyenne Spurlock
 Sp 10,James Smith,Caeli Hill,"Gregory Abramowitz, Charles Kelly"
 Sp 10,Stan Sochacki,Shennie Barroso,Tyler Kirby
-Sp 10,Zachary Van Dijk,Andrew Vzral,Steven Zakai
+Sp 10,Zachary Van Dijk,Andrew Vrzal,Steven Zakai
+Fa 10,Emmy Carr,Ciera Markey,
 Fa 10,Eric Pablo Elias-Rodriguez,Amber Ferguson,"Rodney Carroll, Kim McCaskill"
 Fa 10,Ryan Beretta,Jonathan Bonura,
 Fa 10,Jenn Bruijin,Ben Beha,"JT Patrick, Rose Luzader"
@@ -488,7 +497,7 @@ Sp 13,Judy Rinella,Connie Barroso,
 Sp 13,Tyler Kirby,Stan Sochacki,"Alex Gonzalez, Maryann Shirley"
 Sp 13,Colleen Sochacki,Cheyenne Spurlock,Grace Garratt
 Sp 13,Matthew Tenore,JT Patrick,Chancer Teel
-Sp 13,Liv Burley,Brandon Ehlrich,Sean Patterson
+Sp 13,Liv Burley,Brandon Ehrlich,Sean Patterson
 Sp 13,Audrey Allgood,Rose Luzader,Elyse Frezza
 Sp 13,Lilio Camere,Adam Quintanilla,Malinda Williams
 Sp 13,Hayden Elias-Rodriguez,Shennie Barroso,Ashley Jeanty
