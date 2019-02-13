@@ -57,6 +57,31 @@ std::string brother::getYear() const{ return year; }
 std::string brother::getName() const{ return name; }
 std::string brother::getBig() const{ return big->name; }
 
+bool brother::relatedTo(brother* current, const std::string& n) const{
+	brother* tmp = current;
+
+	while(current != nullptr){
+		if(current->name == n)
+			return true;
+		else
+			current = current->big;
+	}
+	
+	current = tmp;
+	return relaTree(current, n);
+}
+
+bool brother::relaTree(brother* current, const std::string& n) const{
+	if(current->name == n)
+		return true;
+
+	for(auto lil : current->littles){
+		if(relaTree(lil, n))
+			return true;
+	}
+	return false;
+}
+
 // Helper function
 bool brother::isLittle(const std::string& n, int& l) const{
 	if(littles.size() == 0)
@@ -79,7 +104,27 @@ void brother::printLine(brother* current){
 		std::cout << "\t    ^" << std::endl
 			  << "\t    |" << std::endl;
 	}
-	std::cout << current->year << " - " << current->name << std::endl;
+	
+	std::cout << current->year << " - " << current->name; 
+
+	if(relatedTo(current, "Jennifer Harris"))
+		std::cout << "\033[1;32m - Possum\033[0m";
+	if(relatedTo(current, "Jeff Chamlis"))
+		std::cout << "\033[1;35m - Mohecian\033[0m";
+	if(relatedTo(current, "Troy Paolantonio")){
+		if(relatedTo(current, "Briana Meder"))
+			std::cout << "\033[1;30m - Zeb\033[0m";
+		else
+			std::cout << "\033[1;37m - Zeb\033[0m";
+	}
+	if(relatedTo(current, "Tony Geronimos"))
+		std::cout << "\033[1;33m - Rabbit\033[0m";
+	if(relatedTo(current, "Josh Willoughby"))
+		std::cout << "\033[1;34m - Whale\033[0m";
+	if(relatedTo(current, "Michael Weintraub"))
+		std::cout << "\033[1;31m - Panda\033[0m";
+	
+	std::cout << std::endl;
 }
 
 // Prints family of brother recursively
@@ -87,8 +132,26 @@ void brother::printTree(brother* current, const int& id){
 	bool fLil = false;
 
 	// Prints indented name
-	std::cout << indent(id-3) << current->name << " ("
-		  << current->year << ')' << std::endl;
+	std::cout << indent(id-3) << current->name;
+	
+	if(relatedTo(current, "Jennifer Harris"))
+		std::cout << "\033[1;32m - Possum\033[0m";
+	if(relatedTo(current, "Jeff Chamlis"))
+		std::cout << "\033[1;35m - Mohecian\033[0m";
+	if(relatedTo(current, "Troy Paolantonio")){
+		if(relatedTo(current, "Briana Meder"))
+			std::cout << "\033[1;30m - Zeb\033[0m";
+		else
+			std::cout << "\033[1;37m - Zeb\033[0m";
+	}
+	if(relatedTo(current, "Tony Geronimos"))
+		std::cout << "\033[1;33m - Rabbit\033[0m";
+	if(relatedTo(current, "Josh Willoughby"))
+		std::cout << "\033[1;34m - Whale\033[0m";
+	if(relatedTo(current, "Michael Weintraub"))
+		std::cout << "\033[1;31m - Panda\033[0m";
+
+	std::cout << " (" << current->year << ')' << std::endl;
 
 	for(auto lil : current->littles){
 		if(!fLil){

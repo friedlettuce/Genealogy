@@ -1,5 +1,5 @@
 psi_lineage.x: driver.o archive.o brother.o
-	g++ -std=c++11 driver.o archive.o brother.o -o psi_lineage.x
+	g++ -std=c++11 driver.o archive.o brother.o -o psi
 
 driver.o: driver.cpp archive.h
 	g++ -c -std=c++11 driver.cpp
