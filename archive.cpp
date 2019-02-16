@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -31,7 +32,7 @@ void archive::readFile(std::ifstream& in){
 	in.close();
 }
 
-brother* archive::searchBrother(const std::string& n){
+brother* archive::searchBrother(const std::string& n) const{
 	for(int i = 0; i < brothers.size(); ++i){
 		if(brothers[i]->getName().find(n) != std::string::npos)
 			return brothers[i];
@@ -49,7 +50,7 @@ void archive::printBanner() const{
 		  << std::setw(25) << "------" << std::endl;
 }
 
-void archive::printClass(const std::string& c){
+void archive::printClass(const std::string& c) const{
 	bool empty = true;
 	
 	std::istringstream strs(c);
@@ -119,28 +120,12 @@ void archive::printInfo(brother* b) const{
 	}
 	std::cout << std::left << std::setw(6) << b->getYear();
 
-	if(COLOR){
-		if(b->relatedTo("Jennifer Harris"))
-			std::cout << "\033[1;32m";
-		if(b->relatedTo("Jeff Chamlis"))
-			std::cout << "\033[1;35m";
-		if(b->relatedTo("Troy Paolantonio")){
-			if(b->relatedTo("Briana Meder"))
-				std::cout << "\033[1;30m";
-			else
-				std::cout << "\033[1;37m";
-		}
-		if(b->relatedTo("Tony Geronimos"))
-			std::cout << "\033[1;33m";
-		if(b->relatedTo("Josh Willoughby"))
-			std::cout << "\033[1;34m";
-		if(b->relatedTo("Michael Weintraub"))
-			std::cout << "\033[1;31m";
-	}
-
-	std::cout << std::setw(25) << b->getName();
 	if(COLOR)
+		famColor(b);
+	std::cout << std::setw(25) << b->getName();
+	if(COLOR)	/***important****/
 		std::cout << "\033[0m";
+	
 	std::cout << std::setw(25) << (b->Big() == nullptr ? "" :
 		b->getBig());
 	
@@ -221,6 +206,28 @@ void archive::printTree(brother* current, const int& id) const{
 				  << "     |" << std::endl;
 			printTree(lil, id+INDENT);
 		}
+	}
+}
+
+void archive::printATree(brother* b, const int& pos) const{
+	std::string name = "";
+	std::string fname = b->getFName();
+	
+	for(int i = 0; i < 7; ++i){
+		name += fname[i];
+	}
+	name += ' ';
+	name += b->getLName()[0];
+
+	if(COLOR)
+		famColor(b);
+	std::cout << std::setw(pos) << std::right << name << std::endl;
+	if(COLOR)
+		std::cout << "\033[0m";
+
+	for(int i = 0; i < b->Littles().size(); ++i){
+		std::cout << std::endl;
+		
 	}
 }
 	
@@ -307,6 +314,25 @@ std::string archive::indent(const int& id) const{
 	for(int i = 0; i < id; ++i)
 		tmp += ' ';
 	return tmp;
+}
+
+void archive::famColor(brother* b) const{
+	if(b->relatedTo("Jennifer Harris"))
+		std::cout << "\033[1;32m";
+	if(b->relatedTo("Jeff Chamlis"))
+		std::cout << "\033[1;35m";
+	if(b->relatedTo("Troy Paolantonio")){
+		if(b->relatedTo("Briana Meder"))
+			std::cout << "\033[1;30m";
+		else
+			std::cout << "\033[1;37m";
+	}
+	if(b->relatedTo("Tony Geronimos"))
+		std::cout << "\033[1;33m";
+	if(b->relatedTo("Josh Willoughby"))
+		std::cout << "\033[1;34m";
+	if(b->relatedTo("Michael Weintraub"))
+		std::cout << "\033[1;31m";
 }
 
 void archive::addBrother(std::string& year, std::string& name, 

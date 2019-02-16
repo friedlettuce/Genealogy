@@ -22,6 +22,9 @@ class brother{
 	
 		// Accessors
 		std::string getName() const;
+		std::string getFName() const;
+		std::string getLName() const;
+
 		std::string getYear() const;
 		std::string getBig() const;
 		void famLabel() const;
@@ -32,7 +35,6 @@ class brother{
 		bool relatedTo(const std::string& n) const;
 		bool relaTree(const brother* current, const std::string& n) const;
 		
-		std::string getLittle(const int& i = 0) const;
 		bool isLittle(const std::string& n, int& l) const;
 };
 #endif

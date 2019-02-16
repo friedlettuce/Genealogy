@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <sstream>
 #include <string>
 #include <vector>
 #include "brother.h"
@@ -53,8 +54,23 @@ void brother::pushLittle(brother* l){
 }
 
 // Accessors
-std::string brother::getYear() const{ return year; }
 std::string brother::getName() const{ return name; }
+std::string brother::getFName() const{
+	std::string fname;
+
+	std::istringstream in(name);
+	in >> fname;
+	return fname;
+}
+std::string brother::getLName() const{
+	std::string lname;
+
+	std::istringstream in(name);
+	in >> lname >> lname;
+	return lname;
+}
+
+std::string brother::getYear() const{ return year; }
 std::string brother::getBig() const{ return big->name; }
 
 brother* brother::Big() const{ return big; }
@@ -96,12 +112,6 @@ bool brother::isLittle(const std::string& n, int& l) const{
 		}	
 	}
 	return false;
-}
-
-// Accesses a littles name
-std::string brother::getLittle(const int& i) const{ 
-	if(i < littles.size())
-		return littles[i]->getName(); 
 }
 
 // Prints the family label next to name

@@ -24,7 +24,8 @@ class archive{
 		// Printing helpers
 		std::string format(std::string& x);
 		std::string indent(const int& id) const;
-		
+		void famColor(brother* b) const;	
+	
 		// Adds a brother to list
 		void addBrother(std::string& year, std::string& name,
 			std::string& bg, std::string& tmp);
@@ -32,14 +33,15 @@ class archive{
 		~archive();
 		void readFile(std::ifstream& in);
 
-		brother* searchBrother(const std::string& n);
+		brother* searchBrother(const std::string& n) const;
 
 		void printBanner() const;
-		void printClass(const std::string& c);	// Also fams
+		void printClass(const std::string& c) const;	// Also fams
 		void printInfo(brother* b) const;
 		void printFamily(brother* b) const;
 		void printLine(brother* b) const;
 		void printList() const;
 		void printTree(brother* current, const int& id) const;
+		void printATree(brother* b, const int& pos) const;
 };
 #endif

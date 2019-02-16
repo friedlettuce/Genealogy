@@ -25,6 +25,8 @@ int main(int args, char* argsv[]){
 	cout << endl << "\tPsi Records" << endl;
 
 	string brother;
+	int pos = 99;
+
 	char select;
 	do{
 		menu();
@@ -40,6 +42,10 @@ int main(int args, char* argsv[]){
 			case 't':
 				Psi.printFamily(
 					Psi.searchBrother(getBrother()));
+				break;
+			case 'r':
+				Psi.printATree(
+					Psi.searchBrother(getBrother()), pos);
 				break;
 			case 'l': 	
 				Psi.printList();
@@ -89,6 +95,7 @@ void menu(){
 	     << "S\tSearch brother" << endl
 	     << "C\tPrint class/family" << endl
 	     << "T\tPrint tree" << endl
+	     << "R\tPrint normalized tree" << endl
 	     << "O\tPrint line of brother" << endl
 	     << "L\tList Brothers" << endl
 	     << "Q\tQuit" << endl << endl
