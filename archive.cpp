@@ -225,9 +225,14 @@ void archive::printATree(brother* b, const int& pos) const{
 	if(COLOR)
 		std::cout << "\033[0m";
 
-	for(int i = 0; i < b->Littles().size(); ++i){
-		std::cout << std::endl;
-		
+	int npos;
+
+	for(int i = b->Littles().size() / 2, j = 0;
+	j < b->Littles().size(); --i, ++j){
+		npos = pos - (i * 9);
+		if(b->Littles().size() % 2 == 0) npos += 5;
+
+		printATree(b->Littles()[j], npos);
 	}
 }
 	

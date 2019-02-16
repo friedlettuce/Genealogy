@@ -11,4 +11,4 @@ brother.o: brother.h brother.cpp
 	g++ -c -std=c++11 brother.cpp
 
 clean:
-	rm *.o psi_lineage.x
+	rm psi
