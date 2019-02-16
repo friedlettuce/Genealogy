@@ -34,6 +34,5 @@ class brother{
 		
 		std::string getLittle(const int& i = 0) const;
 		bool isLittle(const std::string& n, int& l) const;
-		int lilSize() const;
 };
 #endif

@@ -56,6 +56,7 @@ void brother::pushLittle(brother* l){
 std::string brother::getYear() const{ return year; }
 std::string brother::getName() const{ return name; }
 std::string brother::getBig() const{ return big->name; }
+
 brother* brother::Big() const{ return big; }
 std::vector<brother*> brother::Littles() const{ return littles; }
 
@@ -102,9 +103,6 @@ std::string brother::getLittle(const int& i) const{
 	if(i < littles.size())
 		return littles[i]->getName(); 
 }
-
-// Returns size of littles
-int brother::lilSize() const{ return littles.size(); }
 
 // Prints the family label next to name
 void brother::famLabel() const{

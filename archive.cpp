@@ -39,108 +39,6 @@ brother* archive::searchBrother(const std::string& n){
 	return nullptr;
 }
 
-void archive::printInfo(brother* b) const{ 
-	if(b == nullptr || !isBro(b)){
-		std::cout << "Brother not found" << std::endl;
-		return;
-	}
-	std::cout << std::left << std::setw(6) << b->getYear();
-
-	if(COLOR){
-		if(b->relatedTo("Jennifer Harris"))
-			std::cout << "\033[1;32m";
-		if(b->relatedTo("Jeff Chamlis"))
-			std::cout << "\033[1;35m";
-		if(b->relatedTo("Troy Paolantonio")){
-			if(b->relatedTo("Briana Meder"))
-				std::cout << "\033[1;30m";
-			else
-				std::cout << "\033[1;37m";
-		}
-		if(b->relatedTo("Tony Geronimos"))
-			std::cout << "\033[1;33m";
-		if(b->relatedTo("Josh Willoughby"))
-			std::cout << "\033[1;34m";
-		if(b->relatedTo("Michael Weintraub"))
-			std::cout << "\033[1;31m";
-	}
-
-	std::cout << std::setw(25) << b->getName();
-	if(COLOR)
-		std::cout << "\033[0m";
-	std::cout << std::setw(25) << (b->Big() == nullptr ? "" :
-		b->getBig());
-	
-	if(b->Littles().size() == 0)
-		std::cout << std::endl;
-
-	for(int i = 0; i < b->Littles().size(); ++i){
-		std::cout << std::right;		
-
-		if(i == 0)
-			std::cout << std::setw(25);
-		else
-			std::cout << std::setw(81);
-
-		std::cout << b->Littles()[i]->getName() << std::endl;
-	}
-}
-
-void archive::printLine(brother* b) const{
-	if(!isBro(b))
-		return;
-	
-	if(b->Big() != nullptr){
-		printLine(b->Big());
-	
-		std::cout << "\t    ^" << std::endl
-			  << "\t    |" << std::endl;
-	}
-	
-	std::cout << b->getYear() << " - " << b->getName(); 
-	b->famLabel();	
-	std::cout << std::endl;
-}
-
-void archive::printFamily(brother* b) const{
-	if(!isBro(b)){
-		std::cout << "Brother not found" << std::endl;
-		return;
-	} else
-		printTree(b, 0);
-}
-
-void archive::printTree(brother* current, const int& id) const{
-	bool fLil = false;
-
-	// Prints indented name
-	std::cout << indent(id-3) << current->getName();
-	current->famLabel();
-	std::cout << " (" << current->getYear() << ')' << std::endl;
-
-	for(auto lil : current->Littles()){
-		if(!fLil){
-			std::cout << indent(id) << "   ^\n"
-				  << indent(id) << "   |\n"
-				  << indent(id) << "   --\n"
-				  << indent(id) << "    |"
-				  << std::endl;
-			fLil = true;
-
-			printTree(lil, id+INDENT);
-		} else{
-			std::cout << std::endl << indent(id-3);
-			std::cout << current->getName() << " ("
-				  << current->getYear() << ')' << std::endl;
-			std::cout << indent(id);
-			std::cout << "     ^" << std::endl;
-			std::cout << indent(id)
-				  << "     |" << std::endl;
-			printTree(lil, id+INDENT);
-		}
-	}
-}
-
 void archive::printBanner() const{
 	// Header row for bros
 	std::cout << std::left << std::setw(6) << "Year" << std::setw(25)
@@ -149,16 +47,6 @@ void archive::printBanner() const{
 	std::cout << std::left << std::setw(6) << "-----" << std::setw(25) 
 		  << "----" << std::setw(25) << "-------" << std::right 
 		  << std::setw(25) << "------" << std::endl;
-}
-	
-void archive::printList() const{
-	if(brothers.size() > 0)
-		printBanner();
-
-	// Prints out brothers info
-	for(int i = 0; i < brothers.size(); ++i){
-		printInfo(brothers[i]);
-	}
 }
 
 void archive::printClass(const std::string& c){
@@ -224,6 +112,118 @@ void archive::printClass(const std::string& c){
 		std::cout << "No brothers found" << std::endl;
 }
 
+void archive::printInfo(brother* b) const{ 
+	if(b == nullptr || !isBro(b)){
+		std::cout << "Brother not found" << std::endl;
+		return;
+	}
+	std::cout << std::left << std::setw(6) << b->getYear();
+
+	if(COLOR){
+		if(b->relatedTo("Jennifer Harris"))
+			std::cout << "\033[1;32m";
+		if(b->relatedTo("Jeff Chamlis"))
+			std::cout << "\033[1;35m";
+		if(b->relatedTo("Troy Paolantonio")){
+			if(b->relatedTo("Briana Meder"))
+				std::cout << "\033[1;30m";
+			else
+				std::cout << "\033[1;37m";
+		}
+		if(b->relatedTo("Tony Geronimos"))
+			std::cout << "\033[1;33m";
+		if(b->relatedTo("Josh Willoughby"))
+			std::cout << "\033[1;34m";
+		if(b->relatedTo("Michael Weintraub"))
+			std::cout << "\033[1;31m";
+	}
+
+	std::cout << std::setw(25) << b->getName();
+	if(COLOR)
+		std::cout << "\033[0m";
+	std::cout << std::setw(25) << (b->Big() == nullptr ? "" :
+		b->getBig());
+	
+	if(b->Littles().size() == 0)
+		std::cout << std::endl;
+
+	for(int i = 0; i < b->Littles().size(); ++i){
+		std::cout << std::right;		
+
+		if(i == 0)
+			std::cout << std::setw(25);
+		else
+			std::cout << std::setw(81);
+
+		std::cout << b->Littles()[i]->getName() << std::endl;
+	}
+}
+
+void archive::printFamily(brother* b) const{
+	if(!isBro(b)){
+		std::cout << "Brother not found" << std::endl;
+		return;
+	} else
+		printTree(b, 0);
+}
+
+void archive::printLine(brother* b) const{
+	if(!isBro(b))
+		return;
+	
+	if(b->Big() != nullptr){
+		printLine(b->Big());
+	
+		std::cout << "\t    ^" << std::endl
+			  << "\t    |" << std::endl;
+	}
+	
+	std::cout << b->getYear() << " - " << b->getName(); 
+	b->famLabel();	
+	std::cout << std::endl;
+}
+
+void archive::printList() const{
+	if(brothers.size() > 0)
+		printBanner();
+
+	// Prints out brothers info
+	for(int i = 0; i < brothers.size(); ++i){
+		printInfo(brothers[i]);
+	}
+}
+
+void archive::printTree(brother* current, const int& id) const{
+	bool fLil = false;
+
+	// Prints indented name
+	std::cout << indent(id-3) << current->getName();
+	current->famLabel();
+	std::cout << " (" << current->getYear() << ')' << std::endl;
+
+	for(auto lil : current->Littles()){
+		if(!fLil){
+			std::cout << indent(id) << "   ^\n"
+				  << indent(id) << "   |\n"
+				  << indent(id) << "   --\n"
+				  << indent(id) << "    |"
+				  << std::endl;
+			fLil = true;
+
+			printTree(lil, id+INDENT);
+		} else{
+			std::cout << std::endl << indent(id-3);
+			std::cout << current->getName() << " ("
+				  << current->getYear() << ')' << std::endl;
+			std::cout << indent(id);
+			std::cout << "     ^" << std::endl;
+			std::cout << indent(id)
+				  << "     |" << std::endl;
+			printTree(lil, id+INDENT);
+		}
+	}
+}
+	
 /* PRIVATE HELPER FUNCTIONS */
 
 // Checks if brother exists in brothers
@@ -301,6 +301,14 @@ std::string archive::format(std::string& x){
 	return tmp;
 }
 
+std::string archive::indent(const int& id) const{
+	std::string tmp;
+
+	for(int i = 0; i < id; ++i)
+		tmp += ' ';
+	return tmp;
+}
+
 void archive::addBrother(std::string& year, std::string& name, 
 std::string& bg, std::string& tmp){
 	year = format(year);
@@ -339,12 +347,4 @@ std::string& bg, std::string& tmp){
 		}
 	}
 	brothers.push_back(newB);
-}
-
-std::string archive::indent(const int& id) const{
-	std::string tmp;
-
-	for(int i = 0; i < id; ++i)
-		tmp += ' ';
-	return tmp;
 }

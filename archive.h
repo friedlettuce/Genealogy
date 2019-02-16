@@ -20,9 +20,12 @@ class archive{
 		const int INDENT = 4;
 
 		std::vector<std::string> getLils(std::string& LL);
+		
+		// Printing helpers
 		std::string format(std::string& x);
 		std::string indent(const int& id) const;
 		
+		// Adds a brother to list
 		void addBrother(std::string& year, std::string& name,
 			std::string& bg, std::string& tmp);
 	public:
@@ -31,13 +34,12 @@ class archive{
 
 		brother* searchBrother(const std::string& n);
 
-		void printInfo(brother* b) const;
-		void printLine(brother* b) const;
-		void printFamily(brother* b) const;
-	
 		void printBanner() const;
-		void printList() const;
 		void printClass(const std::string& c);	// Also fams
+		void printInfo(brother* b) const;
+		void printFamily(brother* b) const;
+		void printLine(brother* b) const;
+		void printList() const;
 		void printTree(brother* current, const int& id) const;
 };
 #endif
