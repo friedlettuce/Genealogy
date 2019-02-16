@@ -16,8 +16,12 @@ class archive{
 		bool isLittle(const std::string& name);
 		int big, lil;	// Helper indexing values
 
+		bool COLOR = true;
+		const int INDENT = 4;
+
 		std::vector<std::string> getLils(std::string& LL);
 		std::string format(std::string& x);
+		std::string indent(const int& id) const;
 		
 		void addBrother(std::string& year, std::string& name,
 			std::string& bg, std::string& tmp);
@@ -34,5 +38,6 @@ class archive{
 		void printBanner() const;
 		void printList() const;
 		void printClass(const std::string& c);	// Also fams
+		void printTree(brother* current, const int& id) const;
 };
 #endif

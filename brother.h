@@ -9,12 +9,6 @@ class brother{
 		std::string name, year;
 		brother* big;
 		std::vector<brother*> littles;
-
-		const int INDENT = 4;
-		const bool COLOR = false;
-
-		std::string indent(const int& id) const;
-		void famLabel(const brother* current) const;
 	public:
 		// Constructors
 		brother();
@@ -30,16 +24,16 @@ class brother{
 		std::string getName() const;
 		std::string getYear() const;
 		std::string getBig() const;
-		bool relatedTo(const brother* current, const std::string& n) const;
+		void famLabel() const;
+		
+		brother* Big() const;
+		std::vector<brother*> Littles() const;
+
+		bool relatedTo(const std::string& n) const;
 		bool relaTree(const brother* current, const std::string& n) const;
 		
 		std::string getLittle(const int& i = 0) const;
 		bool isLittle(const std::string& n, int& l) const;
 		int lilSize() const;
-
-		// Printing
-		void printInfo() const;
-		void printLine(brother* current);
-		void printTree(brother* current, const int& indent);
 };
 #endif

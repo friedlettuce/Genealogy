@@ -24,6 +24,7 @@ int main(int args, char* argsv[]){
 
 	cout << endl << "\tPsi Records" << endl;
 
+	string brother;
 	char select;
 	do{
 		menu();
@@ -31,8 +32,10 @@ int main(int args, char* argsv[]){
 
 		switch(tolower(select)){
 			case 's':
-				Psi.printInfo(
-					Psi.searchBrother(getBrother()));
+				brother = getBrother();
+				Psi.printBanner();
+
+				Psi.printInfo(Psi.searchBrother(brother));
 				break;
 			case 't':
 				Psi.printFamily(
