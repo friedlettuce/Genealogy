@@ -117,19 +117,19 @@ bool brother::isLittle(const std::string& n, int& l) const{
 // Prints the family label next to name
 void brother::famLabel() const{
 	if(this->relatedTo("Jennifer Harris"))
-		std::cout << "\033[1;32m - Possum\033[0m";
+		std::cout << " - Possum";
 	if(this->relatedTo("Jeff Chamlis"))
-		std::cout << "\033[1;35m - Mohecian\033[0m";
+		std::cout << " - Mohican";
 	if(this->relatedTo("Troy Paolantonio")){
 		if(this->relatedTo("Briana Meder"))
-			std::cout << "\033[1;30m - Zeb\033[0m";
+			std::cout << " - Zeb";
 		else
-			std::cout << "\033[1;37m - Zeb\033[0m";
+			std::cout << " - Zeb";
 	}
 	if(this->relatedTo("Tony Geronimos"))
-		std::cout << "\033[1;33m - Rabbit\033[0m";
+		std::cout << " - Rabbit";
 	if(this->relatedTo("Josh Willoughby"))
-		std::cout << "\033[1;34m - Whale\033[0m";
+		std::cout << " - Whale";
 	if(this->relatedTo("Michael Weintraub"))
-		std::cout << "\033[1;31m - Panda\033[0m";
+		std::cout << " - Panda";
 }
