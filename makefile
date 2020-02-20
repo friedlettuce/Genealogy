@@ -1,16 +1,16 @@
-flags = -static-libgcc -static-libstdc++
+flags = -L/bin/ld -static -std=c++11
 
 psi_lineage.x: driver.o archive.o brother.o
-	g++ -std=c++11 driver.o archive.o brother.o -o psi flags
+	g++ $(flags) driver.o archive.o brother.o -o psi
 
 driver.o: driver.cpp archive.h
-	g++ -c -std=c++11 driver.cpp flags
+	g++ -c $(flags) driver.cpp
 
 archive.o: archive.h archive.cpp brother.h
-	g++ -c -std=c++11 archive.cpp flags
+	g++ -c $(flags) archive.cpp
 
 brother.o: brother.h brother.cpp
-	g++ -c -std=c++11 brother.cpp flags
+	g++ -c $(flags) brother.cpp
 
 clean:
 	rm psi *.o
