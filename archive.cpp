@@ -120,11 +120,11 @@ void archive::printInfo(brother* b) const{
 	}
 	std::cout << std::left << std::setw(6) << b->getYear();
 
-	if(COLOR)
-		famColor(b);
+	//if(COLOR)
+		//famColor(b);
 	std::cout << std::setw(25) << b->getName();
-	if(COLOR)	/***important****/
-		std::cout << "\033[0m";
+	//if(COLOR)	/***important****/
+		//std::cout << "\033[0m";
 	
 	std::cout << std::setw(25) << (b->Big() == nullptr ? "" :
 		b->getBig());
@@ -219,11 +219,11 @@ void archive::printATree(brother* b, const int& pos) const{
 	name += ' ';
 	name += b->getLName()[0];
 
-	if(COLOR)
-		famColor(b);
+	// if(COLOR)
+		// famColor(b);
 	std::cout << std::setw(pos) << std::right << name << std::endl;
-	if(COLOR)
-		std::cout << "\033[0m";
+	// if(COLOR)
+		// std::cout << "\033[0m";
 
 	int npos;
 
@@ -321,6 +321,7 @@ std::string archive::indent(const int& id) const{
 	return tmp;
 }
 
+/*
 void archive::famColor(brother* b) const{
 	if(b->relatedTo("Jennifer Harris"))
 		std::cout << "\033[1;32m";
@@ -339,6 +340,7 @@ void archive::famColor(brother* b) const{
 	if(b->relatedTo("Michael Weintraub"))
 		std::cout << "\033[1;31m";
 }
+*/
 
 void archive::addBrother(std::string& year, std::string& name, 
 std::string& bg, std::string& tmp){

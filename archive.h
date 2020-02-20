@@ -24,7 +24,7 @@ class archive{
 		// Printing helpers
 		std::string format(std::string& x);
 		std::string indent(const int& id) const;
-		void famColor(brother* b) const;	
+		//void famColor(brother* b) const;	
 	
 		// Adds a brother to list
 		void addBrother(std::string& year, std::string& name,
