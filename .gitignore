@@ -1,1 +1,4 @@
 *.o
+registry.csv
+print.csv
+psi*
