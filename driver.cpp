@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <limits>
 #include <string>
 #include "archive.h"
 
@@ -31,8 +32,10 @@ int main(int args, char* argsv[]){
 	int pos = 99;
 
 	char select;
+
 	do{
 		menu();
+
 		cin >> select;
 
 		switch(tolower(select)){
