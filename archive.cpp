@@ -209,24 +209,39 @@ void archive::printTree(brother* current, const int& id) const{
 	}
 }
 
-void archive::printATree(brother* b, const int& pos) const{
-	std::string name = "";
+std::string adFormat(brother* b){
+	std::string name;
 	std::string fname = b->getFName();
 	
 	for(int i = 0; i < 7; ++i){
-		name += fname[i];
+		name.push_back(fname[i]);
 	}
-	name += ' ';
-	name += b->getLName()[0];
+	name.push_back(' ');
+	name.push_back(b->getLName()[0]);
+	return name;
+}
 
-	if(COLOR)
-		famColor(b);
-	std::cout << std::setw(pos) << std::right << name << std::endl;
-	if(COLOR)
-		std::cout << "\033[0m";
+void archive::printATree(brother* b, const int& pos) const{
+	std::string name = adFormat(b);
+
+	//if(COLOR)
+		//famColor(b);
+	std::cout << std::setw(pos/2) << std::right << name << std::endl;
+	//if(COLOR)
+		//std::cout << "\033[0m";
 
 	int npos;
+	for(int i = 1; i < b->Littles().size() + 1; ++i){
+		if(i == 1)
+			npos = 1 + (pos / b->Littles().size()) / 2;
+		else
+			npos = (pos / b->Littles().size());
+		name = adFormat(b->Littles()[i-1]);
+		std::cout << std::setw(npos) << std::right << name;
+	}
+	std::cout << std::endl;
 
+	/*
 	for(int i = b->Littles().size() / 2, j = 0;
 	j < b->Littles().size(); --i, ++j){
 		npos = pos - (i * 9);
@@ -234,6 +249,7 @@ void archive::printATree(brother* b, const int& pos) const{
 
 		printATree(b->Littles()[j], npos);
 	}
+	*/
 }
 	
 /* PRIVATE HELPER FUNCTIONS */

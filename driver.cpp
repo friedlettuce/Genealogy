@@ -29,6 +29,7 @@ int main(int args, char* argsv[]){
 
 	string brother;
 	int pos = 99;
+	int aPos = 128;
 
 	char select;
 	do{
@@ -48,7 +49,7 @@ int main(int args, char* argsv[]){
 				break;
 			case 'r':
 				Psi.printATree(
-					Psi.searchBrother(getBrother()), pos);
+					Psi.searchBrother(getBrother()), aPos);
 				break;
 			case 'l': 	
 				Psi.printList();
