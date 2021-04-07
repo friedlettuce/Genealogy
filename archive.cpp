@@ -108,7 +108,7 @@ void archive::printClass(const std::string& c) const{
 		printFamily(searchBrother("Josh Willoughby"));
 	}else
 		empty = true;
-	
+
 	if(empty)
 		std::cout << "No brothers found" << std::endl;
 }
@@ -120,11 +120,11 @@ void archive::printInfo(brother* b) const{
 	}
 	std::cout << std::left << std::setw(6) << b->getYear();
 
-	if(COLOR)
-		famColor(b);
+	//if(COLOR)
+		//famColor(b);
 	std::cout << std::setw(25) << b->getName();
-	if(COLOR)	/***important****/
-		std::cout << "\033[0m";
+	//if(COLOR)	// important
+		//std::cout << "\033[0m";
 	
 	std::cout << std::setw(25) << (b->Big() == nullptr ? "" :
 		b->getBig());
@@ -164,7 +164,7 @@ void archive::printLine(brother* b) const{
 	}
 	
 	std::cout << b->getYear() << " - " << b->getName(); 
-	b->famLabel();	
+	// b->famLabel();	
 	std::cout << std::endl;
 }
 
@@ -183,7 +183,7 @@ void archive::printTree(brother* current, const int& id) const{
 
 	// Prints indented name
 	std::cout << indent(id-3) << current->getName();
-	current->famLabel();
+	//current->famLabel();
 	std::cout << " (" << current->getYear() << ')' << std::endl;
 
 	for(auto lil : current->Littles()){
@@ -212,44 +212,63 @@ void archive::printTree(brother* current, const int& id) const{
 std::string adFormat(brother* b){
 	std::string name;
 	std::string fname = b->getFName();
-	
+
 	for(int i = 0; i < 7; ++i){
-		name.push_back(fname[i]);
+		if(i < fname.length())
+			name.push_back(fname[i]);
+		else
+			name.push_back(' ');
 	}
 	name.push_back(' ');
 	name.push_back(b->getLName()[0]);
 	return name;
 }
 
+int dfs(brother* b, int level){
+	if(b->Littles().size() == 0)
+		return level;
+	
+	int child;
+	int deepest = level;
+	for(int i = 0; i < b->Littles().size(); ++i){
+		child = dfs(b->Littles()[i], level+1);
+		if(child > deepest) deepest = child;
+	}
+	return deepest;
+}
+
+std::string dfs(brother* b, int level, int target, std::string names){
+	if(level == target)
+		names += " " + adFormat(b);
+	if(b->Littles().size() == 0)
+		return names;
+
+	for(int i = 0; i < b->Littles().size(); ++i){
+		names = dfs(b->Littles()[i], level+1, target, names);
+	}
+	return names;
+}
+
+std::string dfs(brother* b, int level, int target, int lbound, int rbound, std::string names){
+	if(level == target)
+		names += " " + adFormat(b);
+	if(b->Littles().size() == 0)
+		return names;
+
+	for(int i = 0; i < b->Littles().size(); ++i){
+		names = dfs(b->Littles()[i], level+1, target, names);
+	}
+	return names;
+}
+
 void archive::printATree(brother* b, const int& pos) const{
-	std::string name = adFormat(b);
+	int deepest_level = dfs(b, 1);
+	std::cout << "DEEPEST: " << deepest_level << std::endl;
 
-	//if(COLOR)
-		//famColor(b);
-	std::cout << std::setw(pos/2) << std::right << name << std::endl;
-	//if(COLOR)
-		//std::cout << "\033[0m";
-
-	int npos;
-	for(int i = 1; i < b->Littles().size() + 1; ++i){
-		if(i == 1)
-			npos = 1 + (pos / b->Littles().size()) / 2;
-		else
-			npos = (pos / b->Littles().size());
-		name = adFormat(b->Littles()[i-1]);
-		std::cout << std::setw(npos) << std::right << name;
+	for(int i = 0; i < deepest_level; ++i){
+		std::string names = dfs(b, 0, i, 0, pos, "");
+		std::cout << std::setw((pos/2) + (names.length()/2)) << names << std::endl;
 	}
-	std::cout << std::endl;
-
-	/*
-	for(int i = b->Littles().size() / 2, j = 0;
-	j < b->Littles().size(); --i, ++j){
-		npos = pos - (i * 9);
-		if(b->Littles().size() % 2 == 0) npos += 5;
-
-		printATree(b->Littles()[j], npos);
-	}
-	*/
 }
 	
 /* PRIVATE HELPER FUNCTIONS */

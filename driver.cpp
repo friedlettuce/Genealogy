@@ -29,7 +29,7 @@ int main(int args, char* argsv[]){
 
 	string brother;
 	int pos = 99;
-	int aPos = 128;
+	int aPos = 120;
 
 	char select;
 	do{
