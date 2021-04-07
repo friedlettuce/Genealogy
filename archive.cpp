@@ -237,37 +237,33 @@ int dfs(brother* b, int level){
 	return deepest;
 }
 
-std::string dfs(brother* b, int level, int target, std::string names){
-	if(level == target)
-		names += " " + adFormat(b);
-	if(b->Littles().size() == 0)
-		return names;
-
-	for(int i = 0; i < b->Littles().size(); ++i){
-		names = dfs(b->Littles()[i], level+1, target, names);
-	}
-	return names;
-}
-
 std::string dfs(brother* b, int level, int target, int lbound, int rbound, std::string names){
-	if(level == target)
-		names += " " + adFormat(b);
+	if(level == target){
+		int bound_length = rbound - lbound;
+		int extra_space = bound_length - adFormat(b).length();
+		if(extra_space < 0) extra_space = 0;
+
+		for(int i = 0; i < extra_space / 2; ++i)
+			names += ' ';
+		names += adFormat(b);
+		for(int i = names.length(); i < rbound; ++i)
+			names += ' ';
+	}
 	if(b->Littles().size() == 0)
 		return names;
 
+	int child_bound = (rbound - lbound) / b->Littles().size();
 	for(int i = 0; i < b->Littles().size(); ++i){
-		names = dfs(b->Littles()[i], level+1, target, names);
+		names = dfs(b->Littles()[i], level+1, target, (lbound + (child_bound*i)), (lbound + (child_bound * (i+1))), names);
 	}
 	return names;
 }
 
 void archive::printATree(brother* b, const int& pos) const{
 	int deepest_level = dfs(b, 1);
-	std::cout << "DEEPEST: " << deepest_level << std::endl;
-
 	for(int i = 0; i < deepest_level; ++i){
-		std::string names = dfs(b, 0, i, 0, pos, "");
-		std::cout << std::setw((pos/2) + (names.length()/2)) << names << std::endl;
+		std::string names = dfs(b, 0, i, 0, 120, "");
+		std::cout << names << std::endl;
 	}
 }
 	
