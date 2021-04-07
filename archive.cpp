@@ -243,11 +243,12 @@ std::string dfs(brother* b, int level, int target, int lbound, int rbound, std::
 		int extra_space = bound_length - adFormat(b).length();
 		if(extra_space < 0) extra_space = 0;
 
-		for(int i = 0; i < extra_space / 2; ++i)
+		for(int i = names.length(); i < (extra_space / 2) + lbound; ++i)
 			names += ' ';
 		names += adFormat(b);
 		for(int i = names.length(); i < rbound; ++i)
 			names += ' ';
+		//std::cout << "LB: " << lbound << ", RB: " << rbound << "; " << adFormat(b) << std::endl;
 	}
 	if(b->Littles().size() == 0)
 		return names;
