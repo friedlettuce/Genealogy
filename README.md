@@ -1,4 +1,4 @@
-## Psi Geneology
+## Psi Genealogy
 - Track members and lineage throughout Psi
 
 #### To Do
